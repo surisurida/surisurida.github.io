@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "surisurida (DEV)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "docs:dev"],
+      "restart": true,
+      "serverReadyAction": {
+        "action": "debugWithEdge",
+        "pattern": "https?://localhost:.*m([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+        "webRoot": "${workspaceFolder}"
+      }
+    }
+  ]
+}

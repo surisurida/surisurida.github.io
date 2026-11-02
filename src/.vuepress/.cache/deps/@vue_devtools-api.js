@@ -1,0 +1,1 @@
+export { t as addCustomCommand, n as addCustomTab, r as onDevToolsClientConnected, i as onDevToolsConnected, a as removeCustomCommand, o as setupDevToolsPlugin, o as setupDevtoolsPlugin } from "./dist-C2GVBpyD.js";
