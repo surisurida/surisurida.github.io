@@ -49,7 +49,7 @@ pnpm docs:dev      # 개발 서버 실행 (기본 http://localhost:8080)
 ## 글 작성
 
 `src/` 아래에 마크다운 파일을 추가하면 경로가 그대로 URL이 됩니다 (`src/guide/foo.md` → `/guide/foo.html`).
-메뉴에 노출하려면 `src/.vuepress/navbar/en.ts`, `src/.vuepress/sidebar/en.ts`를 수정하세요.
+메뉴에 노출하려면 `src/.vuepress/navbar/ko.ts`, `src/.vuepress/sidebar/ko.ts`를 수정하세요.
 frontmatter와 마크다운 확장 문법은 [테마 문서](https://theme-hope.vuejs.press/guide/)를 참고하세요.
 
 ## 배포

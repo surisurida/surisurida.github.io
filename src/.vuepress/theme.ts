@@ -25,12 +25,12 @@ export default hopeTheme({
       // sidebar
       sidebar: koSidebar,
 
-      footer: "Default footer",
+      footer: "수리 페이지",
 
       displayFooter: true,
 
       metaLocales: {
-        editLink: "Edit this page on GitHub",
+        editLink: "GitHub에서 이 페이지 편집하기",
       },
     },
 
@@ -59,10 +59,6 @@ export default hopeTheme({
         hint: "Password: 1234",
         password: "1234",
       },
-      // "/zh/demo/encrypt.html": {
-      //   hint: "Password: 1234",
-      //   password: "1234",
-      // },
     },
   },
 
@@ -141,13 +137,13 @@ export default hopeTheme({
   plugins: {
     // Note: This is for testing ONLY!
     // You MUST generate and use your own comment service in production.
-    comment: {
-      provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
-    },
+    // comment: {
+    //   provider: "Giscus",
+    //   repo: "vuepress-theme-hope/giscus-discussions",
+    //   repoId: "R_kgDOG_Pt2A",
+    //   category: "Announcements",
+    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
+    // },
 
     components: {
       components: ["Badge", "VPCard"],
