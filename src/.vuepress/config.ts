@@ -7,14 +7,9 @@ export default defineUserConfig({
 
   locales: {
     "/": {
-      lang: "en-US",
-      title: "Docs Demo",
-      description: "A docs demo for vuepress-theme-hope",
-    },
-    "/zh/": {
-      lang: "zh-CN",
-      title: "文档演示",
-      description: "vuepress-theme-hope 的文档演示",
+      lang: "ko-KR",
+      title: "수리 페이지",
+      description: "수리가 관리하는 GitHub 페이지입니다.",
     },
   },
 

@@ -1,26 +1,26 @@
 import { sidebar } from "vuepress-theme-hope";
 
-export const zhSidebar = sidebar({
-  "/zh/": [
+export const koSidebar = sidebar({
+  "/": [
     "",
     "portfolio",
     {
-      text: "案例",
+      text: "Demo",
       icon: "laptop-code",
       prefix: "demo/",
       link: "demo/",
       children: "structure",
     },
     {
-      text: "文档",
+      text: "Docs",
       icon: "book",
       prefix: "guide/",
       children: "structure",
     },
     {
-      text: "幻灯片",
+      text: "Slides",
       icon: "person-chalkboard",
-      link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
+      link: "https://ecosystem.vuejs.press/plugins/markdown/revealjs/demo.html",
     },
   ],
 });
