@@ -13,7 +13,7 @@ export default hopeTheme({
 
   logo: "https://pjy.kr/logo.svg",
 
-  repo: "surisurida/surisurida.github.io",
+  // repo: "surisurida/surisurida.github.io",
 
   docsDir: "src",
 
@@ -31,33 +31,6 @@ export default hopeTheme({
 
       metaLocales: {
         editLink: "GitHub에서 이 페이지 편집하기",
-      },
-    },
-
-    /** Chinese locale config */
-    // "/zh/": {
-    //   // navbar
-    //   navbar: zhNavbar,
-
-    //   // sidebar
-    //   sidebar: zhSidebar,
-
-    //   footer: "默认页脚",
-
-    //   displayFooter: true,
-
-    //   // page meta
-    //   metaLocales: {
-    //     editLink: "在 GitHub 上编辑此页",
-    //   },
-    // },
-  },
-
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
       },
     },
   },
@@ -144,6 +117,12 @@ export default hopeTheme({
     //   category: "Announcements",
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
+
+    // 뉴스 폴더에는 목차 페이지를 자동 생성하지 않는다.
+    // /news/ai/, /news/robot/ 주소는 가장 최근 날짜 페이지로 이동한다 (날짜 페이지의 redirectFrom).
+    catalog: {
+      exclude: [/^\/news\//u],
+    },
 
     components: {
       components: ["Badge", "VPCard"],

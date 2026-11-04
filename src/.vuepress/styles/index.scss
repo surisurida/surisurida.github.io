@@ -1,1 +1,46 @@
 // place your custom styles here
+
+// 뉴스 날짜 페이지 (scripts/fetch_news.py가 frontmatter에 containerClass: news-page를 넣는다)
+// 기사 목록: 대표 이미지는 제목 왼쪽에, 출처·시간은 제목 아래에 표시한다.
+.news-page [vp-content] {
+  ul:has(> li > small) {
+    padding-inline-start: 0;
+    list-style: none;
+  }
+
+  li:has(> small) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-block: 0.9rem;
+
+    > br {
+      display: none; // 줄바꿈은 그리드 배치로 대신한다
+    }
+
+    > small {
+      color: var(--vp-c-text-mute);
+    }
+  }
+
+  // 대표 이미지가 있는 기사
+  li:has(> a > img) {
+    grid-template-columns: 6rem 1fr;
+    column-gap: 0.85rem;
+    align-items: start;
+
+    > a:first-child {
+      display: block;
+      grid-row: span 2;
+      line-height: 0;
+    }
+
+    img {
+      width: 6rem;
+      height: 4rem;
+      margin: 0;
+      border-radius: 6px;
+      background: var(--vp-c-bg-alt);
+      object-fit: cover;
+    }
+  }
+}

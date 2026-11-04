@@ -10,6 +10,7 @@
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:dev": "vuepress-vite dev src",
     "docs:update-package": "pnpm dlx vp-update",
+    "news:update": "uv run scripts/fetch_news.py",
     "test": "node --test \"tests/**/*.test.ts\""
   },
   "devDependencies": {

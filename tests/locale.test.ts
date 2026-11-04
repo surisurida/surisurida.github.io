@@ -19,6 +19,10 @@ registerHooks({
     if (specifier === "./theme.js" && context.parentURL?.endsWith("/config.ts")) {
       return { url: "data:text/javascript,export default {}", shortCircuit: true };
     }
+    // 뉴스 페이지는 스크립트가 생성하는 파일이라 저장소에 없으므로, 폴더를 읽지 않도록 빈 목록으로 대체합니다.
+    if (specifier === "../news.js") {
+      return { url: "data:text/javascript,export const newsDates = () => []", shortCircuit: true };
+    }
     try {
       return nextResolve(specifier, context);
     } catch (error) {
@@ -66,6 +70,10 @@ const collectRoutes = (items: Item[], base: string, out: string[] = []): string[
   return out;
 };
 
+/** 링크 검사 대상 경로를 돌려줍니다. 생성 파일에 의존하는 뉴스 경로는 제외합니다. */
+const checkedRoutes = (items: Item[], base: string): string[] =>
+  collectRoutes(items, base).filter((route) => !route.startsWith("/news/"));
+
 const listMarkdown = (dir: string): string[] =>
   readdirSync(dir).flatMap((name) => {
     if (name === ".vuepress") return [];
@@ -76,14 +84,14 @@ const listMarkdown = (dir: string): string[] =>
 
 describe("상단 메뉴와 사이드바", () => {
   it("상단 메뉴 링크가 실제 페이지에 연결 확인", () => {
-    for (const route of collectRoutes(koNavbar as Item[], "/")) {
+    for (const route of checkedRoutes(koNavbar as Item[], "/")) {
       assert.ok(existsSync(routeToFile(route)), `상단 메뉴 경로 ${route}에 해당하는 페이지가 없습니다`);
     }
   });
 
   it("사이드바 링크가 실제 페이지에 연결 확인", () => {
     for (const [base, items] of Object.entries(koSidebar)) {
-      for (const route of collectRoutes(items as Item[], base)) {
+      for (const route of checkedRoutes(items as Item[], base)) {
         assert.ok(existsSync(routeToFile(route)), `사이드바 경로 ${route}에 해당하는 페이지가 없습니다`);
       }
     }

@@ -3,6 +3,8 @@ name: Deploy Docs
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "0 3,9,21 * * *"   # 매일 06:00, 12:00, 18:00 (KST)에 최신 뉴스로 다시 빌드·배포 (UTC 21시, 3시, 9시)
   workflow_dispatch:
 
 permissions:
@@ -32,6 +34,15 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm test
+
+      - uses: astral-sh/setup-uv@v10.3.0
+        with:
+          cache-dependency-glob: scripts/fetch_news.py   # 스크립트의 의존성 선언이 바뀌면 캐시 갱신
+
+      # 뉴스 사이트 장애로 배포가 멈추지 않도록, 실패하면 저장소에 있는 기존 뉴스 페이지로 빌드한다.
+      - name: 최신 뉴스 수집
+        run: uv run scripts/fetch_news.py
+        continue-on-error: true
 
       - run: pnpm docs:build
 
