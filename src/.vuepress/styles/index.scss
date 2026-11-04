@@ -1,7 +1,7 @@
 // place your custom styles here
 
-// 뉴스 날짜 페이지 (scripts/fetch_news.py가 frontmatter에 containerClass: news-page를 넣는다)
-// 기사 목록: 대표 이미지는 제목 왼쪽에, 출처·시간은 제목 아래에 표시한다.
+// 뉴스 날짜 페이지 (scripts/fetch_news.py가 frontmatter에 containerClass: news-page를 넣습니다.)
+// 기사 목록: 대표 이미지는 제목 왼쪽에, 출처·시간은 제목 아래에 표시합니다.
 .news-page [vp-content] {
   ul:has(> li > small) {
     padding-inline-start: 0;
@@ -14,7 +14,7 @@
     margin-block: 0.9rem;
 
     > br {
-      display: none; // 줄바꿈은 그리드 배치로 대신한다
+      display: none; // 줄바꿈은 그리드 배치로 대신합니다.
     }
 
     > small {
@@ -22,7 +22,12 @@
     }
   }
 
-  // 대표 이미지가 있는 기사
+  // 다크 모드에서는 테마 강조색이 배경과 대비가 낮아, 기사 제목 링크만 더 밝은 파란색으로 표시합니다.
+  [data-theme="dark"] & li:has(> small) > a {
+   color: #b6d7f8;
+  }
+
+  // 대표 이미지가 있는 기사입니다.
   li:has(> a > img) {
     grid-template-columns: 6rem 1fr;
     column-gap: 0.85rem;
