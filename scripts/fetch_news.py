@@ -12,6 +12,8 @@
 3. 쌓인 기사 전체로 src/news/<카테고리>/YYYY-MM-DD.md(그날 한국 시간 기준 나온 기사)를 다시 만든다.
    카테고리 첫 페이지는 따로 없고, /news/<카테고리>/ 주소는 가장 최근 날짜 페이지로 이동한다.
    메뉴(src/.vuepress/navbar, sidebar)는 빌드할 때 이 폴더의 날짜 페이지 목록을 읽어 만든다.
+4. 카테고리마다 가장 최근 날짜의 최신 기사를 모아 data/news/home.md를 만든다.
+   메인 페이지(src/README.md)가 이 파일을 @include로 불러온다.
 
 피드 하나가 실패해도 나머지로 진행한다. 다만 어느 카테고리에서든 기사를 하나도
 받지 못하면(네트워크 장애 등) 아무 파일도 바꾸지 않고 종료 코드 1로 끝낸다.
@@ -38,6 +40,9 @@ KST = timezone(timedelta(hours=9), "KST")
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data" / "news"  # 수집한 기사 저장소 — 페이지는 이 데이터로 만든다
 PAGES_DIR = ROOT / "src" / "news"
+# src/ 밖에 두어야 별도 페이지가 되지 않고, src/README.md가 수집 때마다 바뀌지 않는다.
+HOME_SECTIONS_PATH = DATA_DIR / "home.md"
+HOME_ARTICLES = 5  # 메인 페이지에 보여 줄 카테고리별 기사 수
 
 MAX_AGE = timedelta(days=7)  # 피드에서 이보다 오래된 기사는 받지 않는다
 TIMEOUT = 20  # 요청 하나를 기다리는 최대 시간(초)
@@ -590,6 +595,21 @@ containerClass: news-page
 """
 
 
+def render_home_sections(results: list[tuple[Category, list[Article]]]) -> str:
+    """메인 페이지에 넣을 구획. 카테고리마다 가장 최근 날짜의 기사를 최신순으로 HOME_ARTICLES건까지 담는다."""
+    sections = []
+    for category, articles in results:
+        day, day_articles = next(iter(group_by_date(articles).items()))
+        shown = day_articles[:HOME_ARTICLES]
+        sections.append(
+            f"## {category.title}\n\n"
+            f"{korean_date(day)}에 나온 기사 {len(day_articles)}건 중 최근 {len(shown)}건입니다. "
+            f"[전체 보기](/news/{category.slug}/{day}.md)\n\n"
+            f"{article_list(shown)}"
+        )
+    return GENERATED_NOTICE + "\n\n" + "\n\n".join(sections) + "\n"
+
+
 def write(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8", newline="\n")
 
@@ -621,6 +641,7 @@ def main() -> int:
             print(f"오류: {', '.join(empty)}에서 기사를 하나도 받지 못해 아무 파일도 바꾸지 않습니다.", file=sys.stderr)
             return 1
 
+        stored = []
         for category, fetched in results:
             articles, added = merge(load_store(category), fetched)
             articles, translated, untranslated = translate_titles(client, articles)
@@ -628,12 +649,14 @@ def main() -> int:
             articles, images = fill_images(client, articles)
             save_store(category, articles)
             write_pages(category, articles)
+            stored.append((category, articles))
             print(
                 f"  {category.title}: 새 기사 {added}건, 누적 {len(articles)}건, 제목 번역 {translated}건, "
                 f"Google 원문 주소 {resolved}건, 이미지 찾기 {images}건"
             )
             if untranslated:
                 print(f"  경고: 제목 {untranslated}건은 원문으로 둡니다 (다음 실행 때 다시 번역 시도).", file=sys.stderr)
+        write(HOME_SECTIONS_PATH, render_home_sections(stored))
     print(f"완료: {PAGES_DIR}")
     return 0
 

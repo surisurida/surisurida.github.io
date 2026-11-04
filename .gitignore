@@ -20,6 +20,9 @@ TODOs.md
 # Docs dist directory
 src/.vuepress/dist
 
+# AI
+.claude
+
 # Generated pages
 /data
 /src/news

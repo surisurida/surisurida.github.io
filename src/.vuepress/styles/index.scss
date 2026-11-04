@@ -1,6 +1,11 @@
 // place your custom styles here
 
-// 뉴스 날짜 페이지 (scripts/fetch_news.py가 frontmatter에 containerClass: news-page를 넣습니다.)
+// 메인 페이지의 첫 구획 제목이 상단 이미지에 붙지 않게 띄웁니다.
+.vp-project-home [vp-content] {
+  padding-top: 1.5rem;
+}
+
+// 뉴스 날짜 페이지와 메인 페이지 (둘 다 frontmatter에 containerClass: news-page가 있습니다.)
 // 기사 목록: 대표 이미지는 제목 왼쪽에, 출처·시간은 제목 아래에 표시합니다.
 .news-page [vp-content] {
   ul:has(> li > small) {
