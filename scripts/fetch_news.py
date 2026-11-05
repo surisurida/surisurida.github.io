@@ -7,8 +7,7 @@
 실행: uv run scripts/fetch_news.py   (또는 pnpm news:update)
 
 1. 피드에서 최근 7일 기사를 받아 data/news/<카테고리>.json에 쌓는다 (이미 있는 기사는 건너뜀).
-2. 해외 기사 제목을 한국어로 번역하고, Google 뉴스 링크는 원문 주소로 바꾸고, 기사 대표 이미지를 찾아
-   함께 저장한다 (한 번 처리한 기사는 다시 요청하지 않음).
+2. Google 뉴스 링크는 원문 주소로 바꿔 저장한다 (한 번 바꾼 기사는 다시 요청하지 않음).
 3. 쌓인 기사 전체로 src/news/<카테고리>/YYYY-MM-DD.md(그날 한국 시간 기준 나온 기사)를 다시 만든다.
    카테고리 첫 페이지는 따로 없고, /news/<카테고리>/ 주소는 가장 최근 날짜 페이지로 이동한다.
    메뉴(src/.vuepress/navbar, sidebar)는 빌드할 때 이 폴더의 날짜 페이지 목록을 읽어 만든다.
@@ -48,22 +47,9 @@ MAX_AGE = timedelta(days=7)  # 피드에서 이보다 오래된 기사는 받지
 TIMEOUT = 20  # 요청 하나를 기다리는 최대 시간(초)
 USER_AGENT = "Mozilla/5.0 (compatible; surisurida-news/1.0; +https://surisurida.github.io)"
 
-# 키 없이 쓸 수 있는 비공식 Google 번역 주소. 공식 API가 아니어서 언제든 막힐 수 있으며,
-# 막히면 원문 제목을 그대로 쓰고 다음 실행 때 다시 시도한다.
-# HTTP/1.1 요청은 429(차단)로 거절되는 경우가 있어 HTTP/2(httpx)로 보낸다.
-TRANSLATE_URL = "https://translate.googleapis.com/translate_a/single"
-TRANSLATE_REGION = "해외"  # 이 지역 기사의 제목만 번역한다
-TRANSLATE_BATCH_CHARS = 1500  # 요청 하나에 줄바꿈으로 이어 보낼 제목들의 최대 글자 수
-
-# 피드에 이미지가 없는 기사는 원문 페이지의 대표 이미지(og:image)를 쓴다.
-# 한 사이트에 요청을 몰아 보내면 IP가 차단되므로(실제로 403을 받음) 사이트마다 하나씩, 간격을 두고 연다.
-IMAGE_DELAY = 1.0  # 같은 사이트에 보내는 기사 페이지 요청 사이의 간격(초)
-IMAGE_SITES_AT_ONCE = 8  # 동시에 처리할 사이트 수 (너무 많으면 DNS 조회가 실패한다)
-HEAD_LIMIT = 300_000  # 기사 페이지에서 읽을 최대 바이트 (대표 이미지는 <head> 안에 있다)
-
 # Google 뉴스 RSS는 원문 대신 news.google.com 링크만 준다. Google 뉴스 페이지의 서명 값으로
 # 비공식 내부 API(batchexecute)에 물어 원문 주소를 알아낸다. 공식 API가 아니어서 언제든 막히거나
-# 바뀔 수 있으며, 실패하면 Google 링크를 그대로 쓰고(이미지 없음) 다음 실행 때 다시 시도한다.
+# 바뀔 수 있으며, 실패하면 Google 링크를 그대로 쓰고 다음 실행 때 다시 시도한다.
 GOOGLE_NEWS_HOST = "news.google.com"
 GOOGLE_DECODE_URL = "https://news.google.com/_/DotsSplashUi/data/batchexecute"
 GOOGLE_DELAY = 1.0  # 기사 하나의 원문 주소를 찾은 뒤 다음 기사까지 쉬는 시간(초)
@@ -104,21 +90,15 @@ class Article:
     source: str
     region: str
     published: datetime  # 한국 시간
-    title_ko: str | None = None  # 번역한 제목 (해외 기사만)
-    # 대표 이미지 주소. ""는 찾아봤지만 없음, None은 아직 확인 전 (Google 뉴스 링크는 원문 주소를 찾기 전)
-    image: str | None = None
-
-    @property
-    def display_title(self) -> str:
-        return self.title_ko or self.title
 
     def to_json(self) -> dict:
-        data = {**asdict(self), "published": self.published.isoformat()}
-        return {key: value for key, value in data.items() if value is not None}  # 번역 없는 기사는 title_ko 생략
+        return {**asdict(self), "published": self.published.isoformat()}
 
     @classmethod
     def from_json(cls, data: dict) -> "Article":
-        return cls(**{**data, "published": datetime.fromisoformat(data["published"])})
+        # 예전에 저장한 기사의 image, title_ko 항목은 읽지 않으며, 다음 저장 때 사라진다.
+        published = datetime.fromisoformat(data["published"])
+        return cls(data["title"], data["link"], data["source"], data["region"], published)
 
 
 def google_news(query: str) -> str:
@@ -170,11 +150,6 @@ _INVISIBLE = dict.fromkeys(map(ord, "﻿​"))  # BOM, 폭 없는 공백
 # 시간대 표기가 없는 날짜 (예: "2026-11-03 13:03:52")
 _NAIVE_DATE = re.compile(r"\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(:\d{2})?")
 
-_IMG_SRC = re.compile(r"<img\b[^>]*?\bsrc\s*=\s*[\"']([^\"']+)[\"']", re.IGNORECASE)
-_META_TAG = re.compile(r"<meta\b[^>]*>", re.IGNORECASE)
-_TAG_ATTR = re.compile(r"([\w:-]+)\s*=\s*(?:\"([^\"]*)\"|'([^']*)')")
-_IMAGE_META = ("og:image", "og:image:url", "twitter:image")
-
 
 def clean_text(text: str) -> str:
     """HTML 엔티티를 풀고(두 번 인코딩된 피드 대비) 보이지 않는 문자를 지운 뒤 공백을 하나로 합친다."""
@@ -209,24 +184,6 @@ def http_url(url: str | None) -> str | None:
     return url if url.startswith(("https://", "http://")) else None
 
 
-def feed_image(entry) -> str | None:
-    """피드 항목에 들어 있는 이미지 주소. 썸네일 → 첨부 이미지 → 본문 첫 이미지 순으로 찾는다."""
-    candidates = [m.get("url") for m in entry.get("media_thumbnail", [])]
-    candidates += [
-        m.get("url")
-        for m in entry.get("media_content", [])
-        if m.get("medium") == "image" or "image" in m.get("type", "image")
-    ]
-    candidates += [
-        link.get("href")
-        for link in entry.get("links", [])
-        if link.get("rel") == "enclosure" and link.get("type", "").startswith("image/")
-    ]
-    bodies = [part.get("value", "") for part in entry.get("content", [])] + [entry.get("summary", "")]
-    candidates += [match.group(1) for body in bodies for match in _IMG_SRC.finditer(body)]
-    return next((url for url in map(http_url, candidates) if url), None)
-
-
 def fetch_feed(client: httpx.Client, feed: Feed, now: datetime) -> list[Article]:
     """피드 하나를 내려받아 최근 MAX_AGE 안의 기사를 돌려준다."""
     response = client.get(feed.url)
@@ -248,7 +205,7 @@ def fetch_feed(client: httpx.Client, feed: Feed, now: datetime) -> list[Article]
         # Google 뉴스는 entry.source에 실제 언론사가 있고, 제목 끝에 " - 언론사"가 붙어 있다.
         source = clean_text(entry.get("source", {}).get("title", "")) or feed.name
         title = title.removesuffix(f" - {source}")
-        articles.append(Article(title, link, source, feed.region, published, image=feed_image(entry)))
+        articles.append(Article(title, link, source, feed.region, published))
     return articles
 
 
@@ -268,12 +225,7 @@ def fetch_category(client: httpx.Client, category: Category, now: datetime) -> l
 
 def merge(stored: list[Article], fetched: list[Article]) -> tuple[list[Article], int]:
     """저장된 기사에 새 기사를 더해 최신순으로 돌려준다. 링크나 제목이 같으면 먼저 있던 기사를 남긴다."""
-    # 저장된 기사에 이미지 정보가 없고 이번 피드에 있으면 채워 넣는다.
-    fetched_images = {article.link: article.image for article in fetched if article.image}
-    merged = [
-        replace(a, image=fetched_images[a.link]) if a.image is None and a.link in fetched_images else a
-        for a in stored
-    ]
+    merged = list(stored)
     seen_links = {article.link for article in stored}
     seen_titles = {title_key(article.title) for article in stored}
     for article in fetched:
@@ -285,96 +237,6 @@ def merge(stored: list[Article], fetched: list[Article]) -> tuple[list[Article],
         merged.append(article)
     merged.sort(key=lambda article: article.published, reverse=True)
     return merged, len(merged) - len(stored)
-
-
-def translate_batch(client: httpx.Client, titles: list[str]) -> list[str]:
-    """영어 제목 여러 개를 줄바꿈으로 이어 한 번에 번역하고, 줄 단위로 다시 나눠 돌려준다."""
-    response = client.post(
-        TRANSLATE_URL,
-        params={"client": "gtx", "sl": "en", "tl": "ko", "dt": "t"},
-        data={"q": "\n".join(titles)},
-    )
-    response.raise_for_status()
-    # 응답 형식: [[["번역문", "원문", ...], ...문장별 반복], ...]
-    lines = "".join(segment[0] for segment in response.json()[0] if segment[0]).split("\n")
-    if len(lines) != len(titles):
-        raise ValueError(f"번역 결과의 줄 수가 다릅니다 (보낸 제목 {len(titles)}개, 받은 줄 {len(lines)}개)")
-    results = []
-    for title, line in zip(titles, lines):
-        translated = clean_text(line)
-        # 번역기가 제목 끝에 붙이는 마침표는 원문에 없으면 뗀다.
-        results.append(translated if title.endswith(".") else translated.removesuffix("."))
-    return results
-
-
-def batches(titles: list[str]) -> list[list[str]]:
-    """제목들을 TRANSLATE_BATCH_CHARS 글자를 넘지 않는 묶음으로 나눈다."""
-    groups: list[list[str]] = [[]]
-    size = 0
-    for title in titles:
-        if groups[-1] and size + len(title) > TRANSLATE_BATCH_CHARS:
-            groups.append([])
-            size = 0
-        groups[-1].append(title)
-        size += len(title) + 1
-    return [group for group in groups if group]
-
-
-def translate_titles(client: httpx.Client, articles: list[Article]) -> tuple[list[Article], int, int]:
-    """아직 번역하지 않은 해외 기사 제목을 번역해 (기사 목록, 번역 성공 수, 실패 수)를 돌려준다.
-    번역에 실패한 제목은 원문으로 두고 다음 실행 때 다시 시도한다."""
-    titles = list(dict.fromkeys(a.title for a in articles if a.region == TRANSLATE_REGION and not a.title_ko))
-    translations: dict[str, str] = {}
-    for group in batches(titles):
-        try:
-            translations.update(zip(group, translate_batch(client, group)))
-        except Exception as error:
-            print(f"  경고: 제목 번역 실패 ({describe(error)})", file=sys.stderr)
-            if isinstance(error, httpx.HTTPStatusError) and error.response.status_code == 429:
-                break  # 차단되었으면 남은 요청은 보내지 않는다
-
-    translated = [
-        replace(a, title_ko=translations[a.title]) if not a.title_ko and translations.get(a.title) else a
-        for a in articles
-    ]
-    return translated, len(translations), len(titles) - len(translations)
-
-
-def page_image(client: httpx.Client, url: str) -> str | None:
-    """기사 페이지의 <head>만 읽어 대표 이미지(og:image 등) 주소를 돌려준다."""
-    data = bytearray()
-    with client.stream("GET", url) as response:
-        response.raise_for_status()
-        for chunk in response.iter_bytes():
-            data += chunk
-            if b"</head>" in data or len(data) > HEAD_LIMIT:
-                break
-        base = str(response.url)
-    head = data.decode("utf-8", errors="replace")
-    for tag in _META_TAG.findall(head):
-        attrs = {key.lower(): double or single for key, double, single in _TAG_ATTR.findall(tag)}
-        kind = (attrs.get("property") or attrs.get("name") or "").lower()
-        if kind in _IMAGE_META and (image := http_url(urllib.parse.urljoin(base, attrs.get("content", "")))):
-            return image
-    return None
-
-
-def checked_image(client: httpx.Client, url: str) -> str:
-    """이미지가 브라우저에서 실제로 보이는지 확인해, 보이면 주소를, 아니면 ""를 돌려준다.
-    사이트가 https라 브라우저는 http 이미지를 https로 바꿔 요청하므로 https로 확인한다.
-    429나 서버 오류는 일시적인 문제로 보고 예외를 그대로 올린다 (다음 실행 때 다시 시도)."""
-    if url.startswith("http://"):
-        url = "https://" + url.removeprefix("http://")
-    try:
-        with client.stream("GET", url, headers={"Accept": "image/*"}) as response:
-            if response.status_code == 429 or response.status_code >= 500:
-                response.raise_for_status()
-            ok = response.status_code == 200 and response.headers.get("content-type", "").startswith("image/")
-    except httpx.HTTPStatusError:
-        raise
-    except httpx.HTTPError:  # 연결 실패·시간 초과 (https를 지원하지 않는 서버 포함)
-        return ""
-    return url if ok else ""
 
 
 def google_original_url(client: httpx.Client, link: str) -> str | None:
@@ -405,10 +267,10 @@ def google_original_url(client: httpx.Client, link: str) -> str | None:
 
 
 def resolve_google_links(client: httpx.Client, articles: list[Article]) -> tuple[list[Article], int]:
-    """아직 처리하지 않은 Google 뉴스 링크를 원문 주소로 바꿔 (기사 목록, 바꾼 수)를 돌려준다.
+    """아직 Google 뉴스 주소로 남은 링크를 원문 주소로 바꿔 (기사 목록, 바꾼 수)를 돌려준다.
     원문이 이미 가진 기사(다른 피드로 받은 기사)와 같으면 중복이므로 뺀다.
     Google이 오류를 주거나 연달아 실패하면 이번 실행에서는 그만두고 다음 실행 때 이어서 한다."""
-    targets = [a for a in articles if a.image is None and urllib.parse.urlsplit(a.link).hostname == GOOGLE_NEWS_HOST]
+    targets = [a for a in articles if urllib.parse.urlsplit(a.link).hostname == GOOGLE_NEWS_HOST]
     originals: dict[Article, str] = {}
     failures = 0
     for index, article in enumerate(targets[:GOOGLE_MAX_PER_RUN]):
@@ -443,43 +305,6 @@ def resolve_google_links(client: httpx.Client, articles: list[Article]) -> tuple
     return updated, len(originals)
 
 
-def fill_images(client: httpx.Client, articles: list[Article]) -> tuple[list[Article], int]:
-    """아직 확인하지 않은 기사의 대표 이미지를 원문 페이지에서 찾아 (기사 목록, 찾은 수)를 돌려준다.
-    이미지가 없거나, 브라우저에서 보이지 않는 이미지(http 전용, 이미지가 아닌 응답, 404 등)거나,
-    페이지가 없어졌으면 ""로 기록해 다시 찾지 않는다. 그 밖의 오류(차단, 서버 오류,
-    네트워크 문제)가 나면 그 사이트에는 이번 실행에서 더 요청하지 않고, 다음 실행 때 다시 시도한다."""
-    by_host: dict[str, list[Article]] = defaultdict(list)
-    for article in articles:
-        if article.image is None:
-            by_host[urllib.parse.urlsplit(article.link).hostname or ""].append(article)
-
-    def lookup_host(host: str, host_articles: list[Article]) -> dict[Article, str]:
-        if host == GOOGLE_NEWS_HOST:
-            return {}  # 원문 주소를 찾은 뒤에 이미지를 찾는다 (resolve_google_links)
-        found: dict[Article, str] = {}
-        for index, article in enumerate(host_articles):
-            if index:
-                time.sleep(IMAGE_DELAY)
-            try:
-                image = page_image(client, article.link)
-                found[article] = checked_image(client, image) if image else ""
-            except Exception as error:
-                if isinstance(error, httpx.HTTPStatusError) and error.response.status_code in (404, 410):
-                    found[article] = ""  # 없어진 페이지는 다시 찾지 않는다
-                    continue
-                print(f"  경고: {host} 이미지 확인을 멈춥니다 ({describe(error)})", file=sys.stderr)
-                break
-        return found
-
-    results: dict[Article, str] = {}
-    with ThreadPoolExecutor(max_workers=IMAGE_SITES_AT_ONCE) as pool:
-        for found in pool.map(lookup_host, by_host.keys(), by_host.values()):
-            results.update(found)
-
-    updated = [replace(a, image=results[a]) if a in results else a for a in articles]
-    return updated, sum(1 for image in results.values() if image)
-
-
 def store_path(category: Category) -> Path:
     return DATA_DIR / f"{category.slug}.json"
 
@@ -499,18 +324,14 @@ def save_store(category: Category, articles: list[Article]) -> None:
 
 # ---------------------------------------------------------------- 마크다운 생성
 
-# 기사 제목이 마크다운이나 테마 확장 문법(강조, 링크, HTML 태그, ==표시==, ~아래첨자~,
+# 기사 제목과 출처 이름이 마크다운이나 테마 확장 문법(강조, 링크, HTML 태그, ==표시==, ~아래첨자~,
 # ^위첨자^, !!스포일러!!, {속성}, $수식$ 등)으로 해석되지 않도록 앞에 \를 붙일 문자들.
-_MD_SPECIAL = re.compile(r"([\\`*_{}\[\]<>!|~^=$&])")
+# . : / @는 Vietnam.vn 같은 출처 이름이 자동 링크로 바뀌지 않게 한다.
+_MD_SPECIAL = re.compile(r"([\\`*_{}\[\]<>!|~^=$&.:/@])")
 
 
 def md_text(text: str) -> str:
     return _MD_SPECIAL.sub(r"\\\1", text)
-
-
-def md_title(text: str) -> str:
-    """링크 제목 속성("...") 안에 넣을 문자열. 마우스를 올리면 보인다."""
-    return md_text(text).replace('"', '\\"')
 
 
 def md_url(url: str) -> str:
@@ -540,20 +361,11 @@ def article_list(articles: list[Article]) -> str:
     """기사 목록. 제목에 {{ }}가 있어도 Vue가 템플릿으로 해석하지 않도록 v-pre 컨테이너로 감싼다."""
     if not articles:
         return "이 날 수집된 기사가 없습니다."
-    lines = []
-    for article in articles:
-        link = md_url(article.link)
-        # 대표 이미지는 기사 링크로 감싸 제목 왼쪽에 둔다 (배치는 styles/index.scss의 .news-page).
-        # 이미지 서버가 다른 사이트에서의 사용을 막는 경우가 있어 referrer를 보내지 않고,
-        # 이미지 링크에는 테마의 외부 링크 아이콘(↗)을 붙이지 않는다.
-        image = md_url(article.image) if article.image else ""
-        thumb = f'[![]({image}){{referrerpolicy="no-referrer"}}]({link}){{.no-external-link-icon}} ' if image else ""
-        # 번역한 제목은 원문을 링크의 title 속성에 넣어, 마우스를 올리면 원문이 보이게 한다.
-        hover = f' "{md_title(article.title)}"' if article.title_ko else ""
-        lines.append(
-            f"- {thumb}[{md_text(article.display_title)}]({link}{hover})\n"
-            f"  <small>{md_text(article.source)} · {article.published.astimezone(KST):%H:%M}</small>"
-        )
+    lines = [
+        f"- [{md_text(article.title)}]({md_url(article.link)})\n"
+        f"  <small>{md_text(article.source)} · {article.published.astimezone(KST):%H:%M}</small>"
+        for article in articles
+    ]
     return "::: v-pre\n\n" + "\n".join(lines) + "\n\n:::"
 
 
@@ -587,7 +399,7 @@ containerClass: news-page
 
 ::: info 출처
 
-{sources}. {TRANSLATE_REGION} 기사 제목은 Google 번역으로 옮겼으며, 제목에 마우스를 올리면 원문이 보입니다.
+{sources}.
 
 :::
 
@@ -644,18 +456,11 @@ def main() -> int:
         stored = []
         for category, fetched in results:
             articles, added = merge(load_store(category), fetched)
-            articles, translated, untranslated = translate_titles(client, articles)
             articles, resolved = resolve_google_links(client, articles)
-            articles, images = fill_images(client, articles)
             save_store(category, articles)
             write_pages(category, articles)
             stored.append((category, articles))
-            print(
-                f"  {category.title}: 새 기사 {added}건, 누적 {len(articles)}건, 제목 번역 {translated}건, "
-                f"Google 원문 주소 {resolved}건, 이미지 찾기 {images}건"
-            )
-            if untranslated:
-                print(f"  경고: 제목 {untranslated}건은 원문으로 둡니다 (다음 실행 때 다시 번역 시도).", file=sys.stderr)
+            print(f"  {category.title}: 새 기사 {added}건, 누적 {len(articles)}건, Google 원문 주소 {resolved}건")
         write(HOME_SECTIONS_PATH, render_home_sections(stored))
     print(f"완료: {PAGES_DIR}")
     return 0

@@ -6,23 +6,17 @@
 }
 
 // 뉴스 날짜 페이지와 메인 페이지 (둘 다 frontmatter에 containerClass: news-page가 있습니다.)
-// 기사 목록: 대표 이미지는 제목 왼쪽에, 출처·시간은 제목 아래에 표시합니다.
+// 기사 목록: 기사 제목은 단추 목록으로, 출처·시간은 제목 아래에 표시합니다.
 .news-page [vp-content] {
-  ul:has(> li > small) {
-    padding-inline-start: 0;
-    list-style: none;
-  }
-
   li:has(> small) {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    margin-block: 0.9rem;
+    margin-block: 0.6rem;
 
     > br {
-      display: none; // 줄바꿈은 그리드 배치로 대신합니다.
+      display: none; // 줄바꿈은 아래 small의 블록 배치로 대신합니다.
     }
 
     > small {
+      display: block;
       color: var(--vp-c-text-mute);
     }
   }
@@ -30,27 +24,5 @@
   // 다크 모드에서는 테마 강조색이 배경과 대비가 낮아, 기사 제목 링크만 더 밝은 파란색으로 표시합니다.
   [data-theme="dark"] & li:has(> small) > a {
    color: #b6d7f8;
-  }
-
-  // 대표 이미지가 있는 기사입니다.
-  li:has(> a > img) {
-    grid-template-columns: 6rem 1fr;
-    column-gap: 0.85rem;
-    align-items: start;
-
-    > a:first-child {
-      display: block;
-      grid-row: span 2;
-      line-height: 0;
-    }
-
-    img {
-      width: 6rem;
-      height: 4rem;
-      margin: 0;
-      border-radius: 6px;
-      background: var(--vp-c-bg-alt);
-      object-fit: cover;
-    }
   }
 }
