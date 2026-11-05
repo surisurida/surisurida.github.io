@@ -1,8 +1,10 @@
 ---
 home: true
 icon: house
-title: 수리 페이지
+title: Home
 heroImage: https://pjy.kr/logo.svg
+heroImageStyle:
+  max-height: 10rem
 bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
 bgImageStyle:

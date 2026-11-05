@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "5 6,12,18 * * *"   # 매일 06:05, 12:05, 18:05 (KST)에 최신 뉴스로 다시 빌드·배포
+    - cron: "17 3,9,15 * * *"
       timezone: 'Asia/Seoul'
   workflow_dispatch:
 
