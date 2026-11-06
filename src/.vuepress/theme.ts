@@ -118,10 +118,10 @@ export default hopeTheme({
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
 
-    // 뉴스 폴더에는 목차 페이지를 자동 생성하지 않는다.
-    // /news/ai/, /news/robot/ 주소는 가장 최근 날짜 페이지로 이동한다 (날짜 페이지의 redirectFrom).
+    // 뉴스·증시 전망 폴더에는 목차 페이지를 자동 생성하지 않는다.
+    // /news/ai/, /news/robot/, /market/ 주소는 가장 최근 날짜 페이지로 이동한다 (날짜 페이지의 redirectFrom).
     catalog: {
-      exclude: [/^\/news\//u],
+      exclude: [/^\/(news|market)\//u],
     },
 
     components: {

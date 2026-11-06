@@ -26,3 +26,127 @@
    color: #b6d7f8;
   }
 }
+
+// 증시 전망 날짜 페이지 (frontmatter에 containerClass: market-page가 있습니다.)
+// 등락 색은 국내 관례대로 상승은 빨강, 하락은 파랑이며, 색만으로 구분되지 않게 ▲·▼를 함께 씁니다.
+.market-page [vp-content] {
+  --market-up: #c62828;
+  --market-down: #1565c0;
+
+  [data-theme="dark"] & {
+    --market-up: #ff8a80;
+    --market-down: #82b1ff;
+  }
+
+  .market-note {
+    font-size: 0.875rem;
+    color: var(--vp-c-text-mute);
+  }
+
+  .market-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-block: 1rem;
+
+    @media (max-width: 959px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 419px) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .market-card {
+    padding: 0.75rem 0.875rem;
+    border: 1px solid var(--vp-c-border);
+    border-radius: 8px;
+    background: var(--vp-c-bg-alt);
+  }
+
+  .market-card__name {
+    font-weight: 600;
+  }
+
+  .market-card__value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .market-card__change {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .market-card--up .market-card__change {
+    color: var(--market-up);
+  }
+
+  .market-card--down .market-card__change {
+    color: var(--market-down);
+  }
+
+  .market-card__note {
+    margin-top: 0.375rem;
+    font-size: 0.8rem;
+    color: var(--vp-c-text-mute);
+  }
+
+  // 일정 표: 글자 단위로 줄이 바뀌지 않게 열 폭을 지키고, 좁은 화면에서는 표 안에서만 가로로 스크롤합니다.
+  table:not(.market-themes) {
+    th:nth-child(1),
+    td:nth-child(1),
+    th:nth-child(3),
+    td:nth-child(3) {
+      white-space: nowrap;
+    }
+
+    td:nth-child(2) {
+      min-width: 8.5rem;
+    }
+
+    td:nth-child(4) {
+      min-width: 9.5rem;
+    }
+
+    td:nth-child(5) {
+      min-width: 15rem;
+    }
+  }
+
+  // 연계 표도 좁은 화면에서 페이지 폭을 넘지 않도록 표 안에서만 가로로 스크롤합니다.
+  .market-table-wrap {
+    margin-block: 1rem;
+    overflow-x: auto;
+  }
+
+  .market-themes {
+    display: table;
+    width: 100%;
+    min-width: 46rem;
+    margin: 0;
+
+    td:first-child,
+    td:nth-child(2),
+    td:nth-child(3) {
+      width: 17%;
+    }
+  }
+
+  .market-themes__heading {
+    text-align: start;
+    background: var(--vp-c-bg-alt);
+  }
+
+  .market-themes__up .market-themes__heading {
+    color: var(--market-up);
+  }
+
+  .market-themes__down .market-themes__heading {
+    color: var(--market-down);
+  }
+}

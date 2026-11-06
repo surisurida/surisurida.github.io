@@ -1,13 +1,23 @@
 import { sidebar } from "vuepress-theme-hope";
 
+import { marketDates } from "../market.js";
 import { newsDates } from "../news.js";
 
+const marketPages = marketDates();
 const aiDates = newsDates("ai");
 const robotDates = newsDates("robot");
 
 export const koSidebar = sidebar({
   "/": [
     "",
+    {
+      text: "증시 전망",
+      icon: "chart-line",
+      prefix: "market/",
+      link: `market/${marketPages[0]}`,
+      collapsible: true,
+      children: marketPages,
+    },
     {
       text: "뉴스",
       icon: "newspaper",

@@ -34,6 +34,7 @@ pnpm docs:dev      # 개발 서버 실행 (기본 http://localhost:8080)
 ├── scripts/fetch_news.py               # 뉴스 수집 스크립트 (uv로 실행)
 ├── src/                                # 사이트 소스 (VuePress 루트)
 │   ├── README.md                       # 홈페이지 (/)
+│   ├── market/                         # 증시 전망 페이지 — 직접 작성해 커밋 (날짜별)
 │   ├── news/                           # 뉴스 페이지 — 스크립트가 생성 (ai/, robot/ 아래 날짜별)
 │   └── .vuepress/
 │       ├── config.ts                   # 사이트 설정 (제목, 언어, base 등)
@@ -53,6 +54,15 @@ pnpm docs:dev      # 개발 서버 실행 (기본 http://localhost:8080)
 `src/` 아래에 마크다운 파일을 추가하면 경로가 그대로 URL이 됩니다 (`src/guide/foo.md` → `/guide/foo.html`).
 메뉴에 노출하려면 `src/.vuepress/navbar/ko.ts`, `src/.vuepress/sidebar/ko.ts`를 수정하세요.
 frontmatter와 마크다운 확장 문법은 [테마 문서](https://theme-hope.vuejs.press/guide/)를 참고하세요.
+
+## 증시 전망 페이지
+
+미국 증시 테마와 연계되는 한국 증시 테마를 날짜별로 정리합니다. 뉴스와 달리 자동 수집이 아니라 `src/market/YYYY-MM-DD.md`를 직접 작성해 커밋합니다.
+
+- 구성은 ① 미국 지수 카드 → ② 일정 체크포인트 → ③ 미국·한국 테마 연계 표 → 면책 조항 순서로 고정합니다.
+- 새 날짜를 올릴 때는 `redirectFrom: /market/`을 새 페이지로 옮기고, `src/README.md`의 증시 전망 구획도 함께 바꿉니다.
+- `tests/market.test.ts`가 구성과 게시 금지 표현을 검사합니다. 실패하면 배포 워크플로의 `pnpm test`에서 멈춰 배포되지 않습니다.
+  문구만 거르는 검사이므로 게시 전 법률 검토를 대신하지 않습니다.
 
 ## 뉴스 페이지
 
