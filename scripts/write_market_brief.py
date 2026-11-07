@@ -98,11 +98,27 @@ def one_line(text: object) -> str:
     return json.dumps(text, ensure_ascii=False)
 
 
+def tail(text: str | None, limit: int = 1500) -> str:
+    """명령 출력의 끝부분을 로그에 남길 형태로 돌려준다. 실패 이유는 보통 마지막에 있다."""
+    return one_line((text or "").strip()[-limit:])
+
+
 def find_claude() -> str | None:
     """claude 명령의 경로를 돌려준다. 작성하지 않는 배포를 느리게 하지 않도록 필요할 때만 러너에 설치한다."""
+    captured = {"capture_output": True, "text": True, "encoding": "utf-8", "errors": "replace", "check": False}
     if not shutil.which("claude") and "GITHUB_ACTIONS" in os.environ:
-        subprocess.run(["npm", "install", "-g", CLAUDE_CODE_PACKAGE], capture_output=True, check=False)
-    return shutil.which("claude")
+        installed = subprocess.run(["npm", "install", "-g", CLAUDE_CODE_PACKAGE], **captured)
+        if installed.returncode != 0:
+            warn(f"Claude Code 설치 실패 (종료 코드 {installed.returncode}): {tail(installed.stderr)}")
+    claude = shutil.which("claude")
+    if claude:
+        # 작성이 실패했을 때 설치 문제인지 실행 조건 문제인지 가를 수 있도록 먼저 실행해 본다.
+        try:
+            version = subprocess.run([claude, "--version"], timeout=60, **captured)
+            print(f"Claude Code: {claude} {tail(version.stdout or version.stderr)} (종료 코드 {version.returncode})")
+        except (OSError, subprocess.TimeoutExpired) as problem:
+            warn(f"claude --version을 실행하지 못했습니다: {type(problem).__name__}: {one_line(str(problem))}")
+    return claude
 
 
 def run_claude(claude: str, step: str, prompt: str, options: list[str], timeout: int, env: dict[str, str]) -> dict:
@@ -110,17 +126,27 @@ def run_claude(claude: str, step: str, prompt: str, options: list[str], timeout:
     command = [claude, "-p", "--model", MODEL, "--effort", "high", "--output-format", "json", *options]
     try:
         completed = subprocess.run(
-            command, input=prompt, capture_output=True, text=True, encoding="utf-8", cwd=ROOT, env=env, timeout=timeout
+            command, input=prompt, capture_output=True, text=True, encoding="utf-8", errors="replace",
+            cwd=ROOT, env=env, timeout=timeout,
         )
+    except subprocess.TimeoutExpired:
+        warn(f"{step}: Claude Code가 {timeout}초 안에 끝나지 않았습니다.")
+        return {}
+    except OSError as problem:
+        warn(f"{step}: Claude Code를 실행하지 못했습니다: {one_line(str(problem))}")
+        return {}
+    try:
         result = json.loads(completed.stdout)
-    except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError) as problem:
-        warn(f"{step}: Claude Code 결과를 얻지 못했습니다 ({type(problem).__name__})")
+    except json.JSONDecodeError:
+        # 옵션 오류나 시작 실패 때는 JSON 없이 stderr에만 이유를 남기고 끝난다.
+        warn(f"{step}: Claude Code가 JSON 결과를 내지 않았습니다 (종료 코드 {completed.returncode}). stderr: {tail(completed.stderr)}")
+        print(f"{step} 표준 출력: {tail(completed.stdout)}")
         return {}
 
     shown = ("subtype", "is_error", "num_turns", "total_cost_usd", "structured_output")
     print(f"{step} 결과: {one_line({key: result.get(key) for key in shown})}")
     if result.get("is_error"):
-        print(f"{step} 오류: {one_line(result.get('result'))}")
+        warn(f"{step} 오류: {one_line(result.get('result'))}")
     summarize(f"{step}: 추정 비용 ${result.get('total_cost_usd', '?')}, 턴 {result.get('num_turns', '?')}")
     return result.get("structured_output") or {}
 

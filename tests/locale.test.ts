@@ -23,6 +23,10 @@ registerHooks({
     if (specifier === "../news.js") {
       return { url: "data:text/javascript,export const newsDates = () => []", shortCircuit: true };
     }
+    // 증시 전망 페이지도 배포 때 만들어지므로, 메뉴 구성을 항상 검사할 수 있게 페이지가 하나 있는 것으로 대체합니다.
+    if (specifier === "../market.js") {
+      return { url: 'data:text/javascript,export const marketDates = () => ["2026-11-06"]', shortCircuit: true };
+    }
     try {
       return nextResolve(specifier, context);
     } catch (error) {
@@ -83,6 +87,26 @@ const listMarkdown = (dir: string): string[] =>
   });
 
 describe("상단 메뉴와 사이드바", () => {
+  it("상단 메뉴에는 증시 전망, AI 뉴스, 로봇 뉴스가 묶이지 않고 바로 나옴", () => {
+    const items = (koNavbar as { text: string; children?: unknown }[]).slice(0, 3);
+    assert.deepEqual(
+      items.map((item) => item.text),
+      ["증시 전망", "AI 뉴스", "로봇 뉴스"],
+    );
+    for (const item of items) {
+      assert.equal(item.children, undefined, `상단 메뉴의 ${item.text}에 하위 메뉴가 없어야 합니다`);
+    }
+  });
+
+  it("사이드바에서는 증시 전망, AI, 로봇이 뉴스 카테고리 아래에 있음", () => {
+    const items = (koSidebar as Record<string, unknown>)["/"] as { text?: string; children?: { text: string }[] }[];
+    const news = items.find((item) => item.text === "뉴스");
+    assert.deepEqual(
+      news?.children?.slice(0, 3).map((child) => child.text),
+      ["증시 전망", "AI", "로봇"],
+    );
+  });
+
   it("상단 메뉴 링크가 실제 페이지에 연결 확인", () => {
     for (const route of checkedRoutes(koNavbar as Item[], "/")) {
       assert.ok(existsSync(routeToFile(route)), `상단 메뉴 경로 ${route}에 해당하는 페이지가 없습니다`);
