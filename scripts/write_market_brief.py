@@ -27,6 +27,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time as clock
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 
@@ -51,6 +52,13 @@ WRITE_TIMEOUT = 40 * 60  # 작성 실행을 기다리는 최대 시간(초)
 REVIEW_TIMEOUT = 10 * 60  # 법률 검토 실행을 기다리는 최대 시간(초)
 WRITE_BUDGET_USD = "10"  # 작성 실행의 비용 상한
 REVIEW_BUDGET_USD = "2"  # 법률 검토 실행의 비용 상한
+
+# Ubuntu 24.04부터 있는 사용자 네임스페이스 제한 설정과, Claude Code가 명령을 격리할 때와 같은 bubblewrap 옵션이다.
+USERNS_RESTRICTION = Path("/proc/sys/kernel/apparmor_restrict_unprivileged_userns")
+BWRAP_TRIAL = [
+    "bwrap", "--new-session", "--die-with-parent", "--unshare-user", "--unshare-pid",
+    "--ro-bind", "/", "/", "--dev", "/dev", "--proc", "/proc", "/bin/true",
+]
 
 # Yahoo는 약관이 자동 수집을 금지하고 Finviz도 제한한다고 알려져 있어 직접 가져오지 않는다.
 BLOCKED_FETCHES = "WebFetch(domain:*.yahoo.com),WebFetch(domain:finviz.com),WebFetch(domain:*.finviz.com)"
@@ -103,22 +111,56 @@ def tail(text: str | None, limit: int = 1500) -> str:
     return one_line((text or "").strip()[-limit:])
 
 
+def run_setup(name: str, command: list[str], timeout: int = 300) -> subprocess.CompletedProcess | None:
+    """러너 준비 명령을 시크릿 없이 실행한다. 실패하면 이유를 경고로 남기고 None을 돌려준다."""
+    env = {key: value for key, value in os.environ.items() if key not in SECRETS}
+    try:
+        completed = subprocess.run(
+            command, capture_output=True, text=True, encoding="utf-8", errors="replace",
+            env=env, timeout=timeout, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as problem:
+        warn(f"{name} 실패: {type(problem).__name__}: {one_line(str(problem))}")
+        return None
+    if completed.returncode != 0:
+        warn(f"{name} 실패 (종료 코드 {completed.returncode}): {tail(completed.stderr or completed.stdout)}")
+        return None
+    return completed
+
+
 def find_claude() -> str | None:
     """claude 명령의 경로를 돌려준다. 작성하지 않는 배포를 느리게 하지 않도록 필요할 때만 러너에 설치한다."""
-    captured = {"capture_output": True, "text": True, "encoding": "utf-8", "errors": "replace", "check": False}
     if not shutil.which("claude") and "GITHUB_ACTIONS" in os.environ:
-        installed = subprocess.run(["npm", "install", "-g", CLAUDE_CODE_PACKAGE], **captured)
-        if installed.returncode != 0:
-            warn(f"Claude Code 설치 실패 (종료 코드 {installed.returncode}): {tail(installed.stderr)}")
+        run_setup("Claude Code 설치", ["npm", "install", "-g", CLAUDE_CODE_PACKAGE])
     claude = shutil.which("claude")
-    if claude:
-        # 작성이 실패했을 때 설치 문제인지 실행 조건 문제인지 가를 수 있도록 먼저 실행해 본다.
-        try:
-            version = subprocess.run([claude, "--version"], timeout=60, **captured)
-            print(f"Claude Code: {claude} {tail(version.stdout or version.stderr)} (종료 코드 {version.returncode})")
-        except (OSError, subprocess.TimeoutExpired) as problem:
-            warn(f"claude --version을 실행하지 못했습니다: {type(problem).__name__}: {one_line(str(problem))}")
+    if claude and (version := run_setup("claude --version", [claude, "--version"], timeout=60)):
+        print(f"Claude Code: {claude} {tail(version.stdout)}")
     return claude
+
+
+def prepare_isolation() -> bool:
+    """러너에서 작성 실행의 명령 격리를 준비한다. 격리가 동작하면 True를 돌려준다.
+
+    Linux의 Claude Code는 CLAUDE_CODE_SUBPROCESS_ENV_SCRUB을 켜면 bubblewrap을 요구하는데, 러너에는 없고
+    Ubuntu의 AppArmor도 이를 막는다. 공식 claude-code-action과 같은 방법으로 풀어 준다.
+    """
+    if "GITHUB_ACTIONS" not in os.environ or sys.platform != "linux":
+        return True
+    if not shutil.which("bwrap"):
+        for _ in range(3):  # 패키지 저장소가 잠시 응답하지 않을 때가 있어 다시 시도한다.
+            if run_setup("apt-get update", ["sudo", "-n", "apt-get", "update", "-qq"]) and run_setup(
+                "bubblewrap 설치",
+                ["sudo", "-n", "apt-get", "install", "-y", "--no-install-recommends", "bubblewrap", "socat"],
+            ):
+                break
+            clock.sleep(5)
+    if USERNS_RESTRICTION.exists():
+        run_setup(
+            "사용자 네임스페이스 제한 해제",
+            ["sudo", "-n", "sysctl", "-w", "kernel.apparmor_restrict_unprivileged_userns=0"],
+        )
+    # 격리가 막혀 있으면 조사 비용을 다 쓴 뒤에야 pnpm test에서 실패하므로, 쓰기 전에 시험해 본다.
+    return run_setup("bubblewrap 동작 확인", BWRAP_TRIAL, timeout=60) is not None
 
 
 def run_claude(claude: str, step: str, prompt: str, options: list[str], timeout: int, env: dict[str, str]) -> dict:
@@ -270,6 +312,9 @@ def main(now: datetime | None = None) -> int:
     claude = find_claude()
     if not claude:
         warn("claude 명령을 찾지 못해 증시 전망을 작성하지 않습니다.")
+        return 0
+    if not prepare_isolation():
+        warn("명령 격리를 준비하지 못해 증시 전망을 작성하지 않습니다.")
         return 0
 
     if force:
