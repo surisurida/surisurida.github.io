@@ -3,6 +3,31 @@
 // 메인 페이지의 첫 구획 제목이 상단 이미지에 붙지 않게 띄웁니다.
 .vp-project-home [vp-content] {
   padding-top: 1.5rem;
+
+  // 문의 채널: 뉴스 목록과 구분되도록 박스로 묶습니다.
+  .contact-box {
+    margin-top: 2rem;
+    padding: 0.875rem 1.125rem;
+    border: 1px solid var(--vp-c-border);
+    border-radius: 8px;
+    font-size: small;
+    background: var(--vp-c-bg-alt);
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // 문의 채널의 이메일 이미지를 옆 글자와 같은 줄 높이에 맞춥니다.
+  img[src*="/email-"] {
+    width: auto;
+    height: 1.1rem;
+    vertical-align: middle;
+  }
 }
 
 // 뉴스 날짜 페이지와 메인 페이지 (둘 다 frontmatter에 containerClass: news-page가 있습니다.)

@@ -31,11 +31,13 @@ pnpm docs:dev      # 개발 서버 실행 (기본 http://localhost:8080)
 ```
 .
 ├── .github/workflows/deploy-docs.yml   # GitHub Pages 배포 워크플로
-├── scripts/fetch_news.py               # 뉴스 수집 스크립트 (uv로 실행)
+├── scripts/
+│   ├── fetch_news.py                   # 뉴스 수집 스크립트 (uv로 실행)
+│   ├── write_market_brief.py           # 증시 전망 작성 스크립트 (uv로 실행)
+│   └── market_brief/                   # 증시 전망 작성·법률 검토 프롬프트와 형식 본보기
 ├── src/                                # 사이트 소스 (VuePress 루트)
 │   ├── README.md                       # 홈페이지 (/)
-│   ├── market/                         # 증시 전망 페이지 — 직접 작성해 커밋 (날짜별)
-│   ├── news/                           # 뉴스 페이지 — 스크립트가 생성 (ai/, robot/ 아래 날짜별)
+│   ├── news/                           # 뉴스·증시 전망 페이지 — 스크립트가 생성 (ai/, robot/, market/ 아래 날짜별)
 │   └── .vuepress/
 │       ├── config.ts                   # 사이트 설정 (제목, 언어, base 등)
 │       ├── theme.ts                    # 테마 설정 (작성자, 로고, 마크다운 기능, 플러그인)
@@ -57,12 +59,45 @@ frontmatter와 마크다운 확장 문법은 [테마 문서](https://theme-hope.
 
 ## 증시 전망 페이지
 
-미국 증시 테마와 연계되는 한국 증시 테마를 날짜별로 정리합니다. 뉴스와 달리 자동 수집이 아니라 `src/market/YYYY-MM-DD.md`를 직접 작성해 커밋합니다.
+미국 증시 테마와 연계되는 한국 증시 테마를 정리합니다. AI·로봇 뉴스처럼 배포 때 `src/news/market/YYYY-MM-DD.md`를 만들고, 커밋하지 않는 일회성 페이지입니다.
 
 - 구성은 ① 미국 지수 카드 → ② 일정 체크포인트 → ③ 미국·한국 테마 연계 표 → 면책 조항 순서로 고정합니다.
-- 새 날짜를 올릴 때는 `redirectFrom: /market/`을 새 페이지로 옮기고, `src/README.md`의 증시 전망 구획도 함께 바꿉니다.
-- `tests/market.test.ts`가 구성과 게시 금지 표현을 검사합니다. 실패하면 배포 워크플로의 `pnpm test`에서 멈춰 배포되지 않습니다.
-  문구만 거르는 검사이므로 게시 전 법률 검토를 대신하지 않습니다.
+- 메뉴, 메인 페이지 요약, `/news/market/` 이동은 빌드 때 이 폴더의 최신 페이지로 만듭니다. 페이지가 없으면 메뉴와 메인에서 빠집니다.
+- `scripts/market_brief/2026-11-06.md`는 사이트에 나오지 않는 형식 본보기입니다. 작성할 때 참고하고 `pnpm test`도 함께 검사합니다.
+- `tests/market.test.ts`가 구성, 카드 계산, 미국 기준일, 허용 태그와 링크, 게시 금지 표현을 검사합니다. 문구와 형식만 거르는 검사이므로 법률 검토를 대신하지 않습니다.
+
+### 자동 작성
+
+`scripts/write_market_brief.py`가 배포 워크플로의 뉴스 수집 다음 단계에서 실행됩니다. 처음 한 번은 저장소 **Settings → Secrets and variables → Actions**에 다음 중 하나를 등록해야 합니다. 없으면 증시 전망 없이 배포합니다.
+
+| 시크릿 | 인증 방식 | 비용 |
+| --- | --- | --- |
+| `ANTHROPIC_API_KEY` | Claude Console API 키 | 사용한 만큼 API 요금 |
+| `CLAUDE_CODE_OAUTH_TOKEN` | `claude setup-token`으로 만든 토큰 (1년 유효) | Claude 구독 사용량 |
+
+작성에 비용이 들어 한국 평일 07:30 이후 첫 배포에서 하루 한 번만 씁니다. `cron` 값이 아니라 실제 실행 시각으로 판단하므로 `cron`을 바꿔도 스크립트는 그대로 둡니다. 주말, 07:30 전, 그날의 나머지 배포는 Actions 캐시에서 되살린 페이지를 그대로 씁니다. 새 페이지가 통과하면 이전 페이지는 지우고, 4일이 지난 페이지는 내립니다.
+
+강제로 쓰려면 저장소 **Settings → Secrets and variables → Actions**의 **Variables** 탭에 `MARKET_BRIEF_FORCE`를 `Y`로 넣고 **Deploy Docs**를 실행합니다. 주말이나 07:30 전이어도, 오늘 페이지가 이미 있어도 새로 쓰며, 새 페이지가 통과하지 못하면 기존 페이지를 그대로 둡니다. 값이 저절로 돌아가지 않고 `Y`인 동안은 예약 실행과 푸시까지 모든 배포에서 작성해 비용이 드니, 실행이 끝나면 `N`으로 되돌리세요. `N`이거나 변수가 없으면 평소대로 동작합니다.
+
+작성 순서는 다음과 같습니다.
+
+1. **작성** — Claude Code가 `scripts/market_brief/write.md`대로 웹을 조사해 새 페이지 하나를 씁니다.
+2. **검사** — 새 페이지 외의 변경이 없는지 확인하고 `pnpm test`를 실행합니다.
+3. **법률 검토** — 도구 없이 페이지 내용만 보는 별도 실행이 `scripts/market_brief/review.md` 기준으로 판정합니다.
+
+결과에 따라 배포가 달라집니다.
+
+| 상황 | 결과 |
+| --- | --- |
+| 모두 통과 | 새 페이지로 배포합니다. |
+| 시크릿 없음, API 오류, 핵심 수치를 확인하지 못함, 법률 검토 결과를 받지 못함 | 새 페이지를 버리고 직전 페이지로 배포합니다. 실행에는 경고만 남습니다. |
+| `pnpm test` 실패, 새 페이지 외의 변경, 법률 검토 `violation` | 새 페이지를 버리고 배포를 중단합니다. 실패 알림은 GitHub가 cron을 마지막으로 바꾼 사용자에게 보냅니다. |
+
+알아 둘 점입니다.
+
+- 단계별 판정과 추정 비용은 실행 요약에 남습니다. 모델, Claude Code 버전, 실행당 비용 상한은 스크립트 맨 위 상수에 있습니다.
+- Yahoo는 약관이 자동 수집을 금지하고 Finviz도 제한한다고 알려져 있어 직접 가져오기를 막았습니다(`BLOCKED_FETCHES`). 그래서 표가 10개보다 좁아질 수 있습니다.
+- 법률 검토는 무료·일방향 사이트라는 전제에서 합니다. 광고, 유료 회원, 댓글을 붙이면 `review.md`의 전제와 법률 판단을 먼저 다시 확인하세요.
 
 ## 뉴스 페이지
 
@@ -98,13 +133,15 @@ uv run scripts/fetch_news.py   # 또는 pnpm news:update
 ## 배포
 
 `main`에 푸시하거나 Actions 탭에서 **Deploy Docs**를 수동 실행하면 다음이 진행됩니다.
-최신 뉴스를 반영하기 위해 매일 03:17, 09:17, 15:17(KST)에도 자동으로 실행됩니다.
+최신 뉴스를 반영하기 위해 `cron`으로 예약 실행도 합니다. GitHub 예약 실행은 몇 시간씩 늦거나 건너뛸 수 있어, `cron`은 원하는 시각보다 앞당겨 둔 값이고 지연이 달라지면 조정합니다.
 
 1. `pnpm install --frozen-lockfile`
 2. `pnpm test`
 3. `uv run scripts/fetch_news.py` — 최신 뉴스 수집 (실패해도 저장소의 기존 뉴스 페이지로 계속 진행)
-4. `pnpm docs:build`
-5. `src/.vuepress/dist`를 GitHub Pages에 업로드·배포
+4. `uv run scripts/write_market_brief.py` — 증시 전망 작성 (위 [자동 작성](#자동-작성) 참고, 위반을 찾으면 배포 중단)
+5. `pnpm test` — 증시 전망 페이지까지 포함해 다시 검사
+6. `pnpm docs:build`
+7. `src/.vuepress/dist`를 GitHub Pages에 업로드·배포
 
 처음 한 번은 저장소 **Settings → Pages → Source**를 **GitHub Actions**로 설정해야 합니다.
 

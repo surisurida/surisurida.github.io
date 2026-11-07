@@ -10,18 +10,30 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 뉴스 허브
-tagline: 최신 정보를 자동으로 수집하여 제공합니다.
+tagline: 수리 페이지에서 제공하는 정보는 AI로 최신 정보를 수집하고 있습니다.
 
-footer: 수리 페이지
+footer: 이메일무단수집거부
 copyright: © 수리 2026
 containerClass: news-page
 ---
 
+<template v-if="$frontmatter.market">
+
 ## 증시 전망
 
-2026년 11월 6일(금) 브리핑입니다. 미국은 11/5(목) 뉴욕 정규장 종가 기준입니다. [전체 보기](/market/2026-11-06.md)
+{{ $frontmatter.market.briefing }} <RouteLink :to="$frontmatter.market.link">전체 보기</RouteLink>
 
-- [2026-11-06 증시 전망](/market/2026-11-06.md)
-  <small>필라델피아 반도체 -12.25% · 나스닥종합 -5.52% · S&P500 -4.36% · WTI +2.72%</small>
+- <RouteLink :to="$frontmatter.market.link">{{ $frontmatter.market.title }}</RouteLink>
+  <small>{{ $frontmatter.market.changes }}</small>
+
+</template>
 
 <!-- @include: ../data/news/home.md -->
+
+<div class="contact-box">
+
+수리 페이지를 찾아주셔서 감사합니다! 글에 대한 의견이나 궁금한 점이 있으시다면 언제든 편하게 연락해 주세요.
+
+- 문의 채널 : ![문의 이메일 주소](/email-light-text.svg#light)![문의 이메일 주소](/email-dark-text.svg#dark)
+
+</div>

@@ -29,6 +29,9 @@ export default hopeTheme({
 
       displayFooter: true,
 
+      // 기여자를 쓰면 커밋 작성자 메일이 페이지 데이터(JS)에 그대로 실려 공개되므로 수집하지 않습니다.
+      contributors: false,
+
       metaLocales: {
         editLink: "GitHub에서 이 페이지 편집하기",
       },
@@ -45,6 +48,7 @@ export default hopeTheme({
     figure: true,
     gfm: true,
     imgLazyload: true,
+    imgMark: true, // 이미지 주소 끝의 #light, #dark로 테마별 이미지를 나눕니다 (메인 페이지 문의 채널).
     imgSize: true,
     include: true,
     mark: true,
@@ -118,10 +122,10 @@ export default hopeTheme({
     //   categoryId: "DIC_kwDOG_Pt2M4COD69",
     // },
 
-    // 뉴스·증시 전망 폴더에는 목차 페이지를 자동 생성하지 않는다.
-    // /news/ai/, /news/robot/, /market/ 주소는 가장 최근 날짜 페이지로 이동한다 (날짜 페이지의 redirectFrom).
+    // 뉴스 폴더에는 목차 페이지를 자동 생성하지 않는다.
+    // /news/ai/, /news/robot/, /news/market/ 주소는 가장 최근 날짜 페이지로 이동한다 (날짜 페이지의 redirectFrom).
     catalog: {
-      exclude: [/^\/(news|market)\//u],
+      exclude: [/^\/news\//u],
     },
 
     components: {
