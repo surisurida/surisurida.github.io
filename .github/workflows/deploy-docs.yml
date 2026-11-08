@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "17 2,7,10 * * *"
+    - cron: "17 3,8,11 * * *"
       timezone: 'Asia/Seoul'
   workflow_dispatch:
 
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   build:
     # ubuntu-latest가 가리키는 이미지가 바뀌어도 그대로 돌도록 버전을 고정한다.
-    # 증시 전망 작성은 명령 격리(bubblewrap, AppArmor 해제)를 준비하지 못하면 배포를 멈추지 않고 건너뛰므로,
+    # 증시 전망 작성은 명령 격리(bubblewrap·socat 설치, AppArmor 해제)를 준비하지 못하면 배포를 멈추지 않고 건너뛰므로,
     # 이미지를 바꾼 뒤에는 '명령 격리를 준비하지 못해' 경고가 없는지 로그에서 확인한다.
     runs-on: ubuntu-26.04
     steps:

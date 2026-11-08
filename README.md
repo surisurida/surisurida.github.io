@@ -96,7 +96,7 @@ frontmatter와 마크다운 확장 문법은 [테마 문서](https://theme-hope.
 알아 둘 점입니다.
 
 - 단계별 판정과 추정 비용은 실행 요약에 남습니다. 모델, Claude Code 버전, 실행당 비용 상한은 스크립트 맨 위 상수에 있습니다.
-- 작성 실행은 웹 자료를 읽으므로 `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB`으로 하위 명령에서 토큰을 숨기고 격리합니다. Linux에서는 여기에 bubblewrap이 필요해, 스크립트가 작성할 때만 러너에 설치하고 Ubuntu의 사용자 네임스페이스 제한을 풉니다(공식 `claude-code-action`과 같은 방법). 격리 시험이 실패하면 비용을 쓰기 전에 멈춥니다.
+- 작성 실행은 웹 자료를 읽으므로 `CLAUDE_CODE_SUBPROCESS_ENV_SCRUB`으로 하위 명령에서 토큰을 숨기고 격리합니다. Linux에서는 여기에 bubblewrap과 socat이 필요해, 스크립트가 작성할 때만 러너에 없는 것을 설치하고 Ubuntu의 사용자 네임스페이스 제한을 풉니다(공식 `claude-code-action`과 같은 방법). 격리 시험이 실패하면 비용을 쓰기 전에 멈춥니다.
 - Yahoo는 약관이 자동 수집을 금지하고 Finviz도 제한한다고 알려져 있어 직접 가져오기를 막았습니다(`BLOCKED_FETCHES`). 그래서 표가 10개보다 좁아질 수 있습니다.
 - 법률 검토는 무료·일방향 사이트라는 전제에서 합니다. 광고, 유료 회원, 댓글을 붙이면 `review.md`의 전제와 법률 판단을 먼저 다시 확인하세요.
 

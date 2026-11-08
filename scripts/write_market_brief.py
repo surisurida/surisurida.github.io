@@ -10,7 +10,7 @@
 그 사이의 배포는 워크플로가 캐시에서 되살린 페이지를 그대로 쓴다.
 
 1. 오늘 페이지가 있거나, 주말이거나, 뉴욕 마감 자료가 다 나오기 전이면 아무것도 하지 않는다.
-   환경 변수 MARKET_BRIEF_FORCE가 Y이면 이 조건들을 건너뛰고 새로 쓴다.
+   환경 변수 MARKET_BRIEF_FORCE가 Y이면 이 조건들을 건너뛰고, 오늘 페이지가 이미 있어도 새로 쓴다.
 2. Claude Code가 scripts/market_brief/write.md대로 웹을 조사해 새 페이지 하나를 쓴다.
 3. 새 페이지 외의 변경이 없는지 확인하고 pnpm test를 실행한다.
 4. 도구 없는 별도 실행이 scripts/market_brief/review.md 기준으로 법률 검토를 한다.
@@ -53,6 +53,9 @@ REVIEW_TIMEOUT = 10 * 60  # 법률 검토 실행을 기다리는 최대 시간(�
 WRITE_BUDGET_USD = "10"  # 작성 실행의 비용 상한
 REVIEW_BUDGET_USD = "2"  # 법률 검토 실행의 비용 상한
 
+# Linux에서 Claude Code의 명령 격리에 필요한 명령과 그것이 든 apt 패키지다.
+# 러너 이미지마다 미리 설치된 것이 달라(26.04에는 bubblewrap만 있음) 빠진 것만 설치한다.
+SANDBOX_COMMANDS = {"bwrap": "bubblewrap", "socat": "socat"}
 # Ubuntu 24.04부터 있는 사용자 네임스페이스 제한 설정과, Claude Code가 명령을 격리할 때와 같은 bubblewrap 옵션이다.
 USERNS_RESTRICTION = Path("/proc/sys/kernel/apparmor_restrict_unprivileged_userns")
 BWRAP_TRIAL = [
@@ -141,19 +144,23 @@ def find_claude() -> str | None:
 def prepare_isolation() -> bool:
     """러너에서 작성 실행의 명령 격리를 준비한다. 격리가 동작하면 True를 돌려준다.
 
-    Linux의 Claude Code는 CLAUDE_CODE_SUBPROCESS_ENV_SCRUB을 켜면 bubblewrap을 요구하는데, 러너에는 없고
+    Linux의 Claude Code는 CLAUDE_CODE_SUBPROCESS_ENV_SCRUB을 켜면 bubblewrap과 socat을 요구하는데, 러너에 다 있지 않고
     Ubuntu의 AppArmor도 이를 막는다. 공식 claude-code-action과 같은 방법으로 풀어 준다.
+    하나라도 없으면 Claude Code가 격리를 시작하지 못해 pnpm test까지 모든 명령을 막으므로, 쓰기 전에 확인한다.
     """
     if "GITHUB_ACTIONS" not in os.environ or sys.platform != "linux":
         return True
-    if not shutil.which("bwrap"):
+    if packages := [package for command, package in SANDBOX_COMMANDS.items() if not shutil.which(command)]:
         for _ in range(3):  # 패키지 저장소가 잠시 응답하지 않을 때가 있어 다시 시도한다.
             if run_setup("apt-get update", ["sudo", "-n", "apt-get", "update", "-qq"]) and run_setup(
-                "bubblewrap 설치",
-                ["sudo", "-n", "apt-get", "install", "-y", "--no-install-recommends", "bubblewrap", "socat"],
+                f"{' '.join(packages)} 설치",
+                ["sudo", "-n", "apt-get", "install", "-y", "--no-install-recommends", *packages],
             ):
                 break
             clock.sleep(5)
+    if missing := [command for command in SANDBOX_COMMANDS if not shutil.which(command)]:
+        warn(f"명령 격리에 필요한 {', '.join(missing)} 명령이 없습니다.")
+        return False
     if USERNS_RESTRICTION.exists():
         run_setup(
             "사용자 네임스페이스 제한 해제",
@@ -319,6 +326,8 @@ def main(now: datetime | None = None) -> int:
 
     if force:
         warn(f"{FORCE_VARIABLE}가 Y라서 조건과 관계없이 새로 씁니다. 그대로 두면 배포할 때마다 비용이 드니 N으로 되돌리세요.")
+        if page.exists():
+            print(f"{page.name}이 이미 있지만 새로 씁니다. 새 페이지가 통과하지 못하면 기존 페이지를 그대로 씁니다.")
 
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
     # 강제 실행이면 오늘 페이지가 이미 있을 수 있다. 빈 자리에서 새로 쓰게 하고, 통과하지 못하면 되돌린다.
