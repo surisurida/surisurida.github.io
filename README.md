@@ -5,7 +5,7 @@
 
 ## 요구 사항
 
-- Node.js 24
+- Node.js 26
 - pnpm (버전은 `package.json`의 `packageManager` 필드에 고정되어 있음 — `corepack enable`로 맞추면 편합니다)
 - [uv](https://docs.astral.sh/uv/) — 뉴스 수집 스크립트(Python) 실행용. Python과 패키지는 uv가 알아서 받습니다.
 

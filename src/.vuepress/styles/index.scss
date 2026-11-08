@@ -1,17 +1,22 @@
 // place your custom styles here
 
+// 메인 페이지의 문의 채널과 증시 전망의 면책 조항이 함께 쓰는 안내 박스 모양입니다.
+@mixin notice-box {
+  margin-top: 2rem;
+  padding: 0.875rem 1.125rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  font-size: small;
+  background: var(--vp-c-bg-alt);
+}
+
 // 메인 페이지의 첫 구획 제목이 상단 이미지에 붙지 않게 띄웁니다.
 .vp-project-home [vp-content] {
   padding-top: 1.5rem;
 
   // 문의 채널: 뉴스 목록과 구분되도록 박스로 묶습니다.
   .contact-box {
-    margin-top: 2rem;
-    padding: 0.875rem 1.125rem;
-    border: 1px solid var(--vp-c-border);
-    border-radius: 8px;
-    font-size: small;
-    background: var(--vp-c-bg-alt);
+    @include notice-box;
 
     > :first-child {
       margin-top: 0;
@@ -173,5 +178,32 @@
 
   .market-themes__down .market-themes__heading {
     color: var(--market-down);
+  }
+
+  // 투자 주의사항 및 면책 조항: 메인 페이지의 문의 채널과 같은 박스로 보이게 합니다.
+  // 페이지는 자동으로 쓰이고 캐시에서 되살린 지난 페이지도 함께 보여야 해서 마크다운은 그대로 두고,
+  // 맨 끝의 제목 문단(굵은 글씨만 있음)과 본문 문단을 박스의 위·아래 절반으로 그려 하나로 잇습니다.
+  #markdown-content {
+    > hr:has(+ p:nth-last-child(2) > strong:only-child) {
+      display: none; // 박스가 구획을 나누므로 앞의 구분선은 숨깁니다.
+    }
+
+    > p:nth-last-child(2):has(> strong:only-child) {
+      @include notice-box;
+      margin-bottom: 0;
+      padding-bottom: 0.25rem;
+      border-bottom: 0;
+      border-end-start-radius: 0;
+      border-end-end-radius: 0;
+    }
+
+    > p:has(> strong:only-child) + p:last-child {
+      @include notice-box;
+      margin-top: 0;
+      padding-top: 0.25rem;
+      border-top: 0;
+      border-start-start-radius: 0;
+      border-start-end-radius: 0;
+    }
   }
 }
