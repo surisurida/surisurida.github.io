@@ -126,7 +126,28 @@
     color: var(--vp-c-text-mute);
   }
 
-  // 일정 표: 글자 단위로 줄이 바뀌지 않게 열 폭을 지키고, 좁은 화면에서는 표 안에서만 가로로 스크롤합니다.
+  // ② 일정 표와 ③ 연계 표: 가로 스크롤 없이 본문 폭에 맞추고, 내용이 길면 칸 안에서 줄을 바꿔 모두 보여줍니다.
+  table {
+    display: table;
+    width: 100%;
+
+    // 휴대폰 폭에서는 글자 크기와 칸 여백을 줄여 칸마다 한 줄에 더 많은 글자가 들어가게 하고,
+    // 마지막 칸(코멘트·근거)의 긴 숫자·영문 덩어리도 폭이 모자라면 중간에서 줄을 바꿔 표가 본문 밖으로 나가지 않게 합니다.
+    @media (max-width: 719px) {
+      font-size: 0.875rem;
+
+      th,
+      td {
+        padding: 0.375rem;
+      }
+
+      td:last-child {
+        overflow-wrap: anywhere;
+      }
+    }
+  }
+
+  // 일정 표의 D-day와 시장 칸은 짧으므로 글자 단위로 줄이 바뀌지 않게 합니다.
   table:not(.market-themes) {
     th:nth-child(1),
     td:nth-child(1),
@@ -135,31 +156,16 @@
       white-space: nowrap;
     }
 
-    td:nth-child(2) {
-      min-width: 8.5rem;
+    // 휴대폰 폭에서는 코멘트 칸이 남은 폭을 거의 다 가져가 이벤트 칸이 한 글자 폭으로 눌리므로, 날짜와 이벤트 칸 폭을 정해 둡니다.
+    @media (max-width: 719px) {
+      td:nth-child(2),
+      td:nth-child(4) {
+        width: 22%;
+      }
     }
-
-    td:nth-child(4) {
-      min-width: 9.5rem;
-    }
-
-    td:nth-child(5) {
-      min-width: 15rem;
-    }
-  }
-
-  // 연계 표도 좁은 화면에서 페이지 폭을 넘지 않도록 표 안에서만 가로로 스크롤합니다.
-  .market-table-wrap {
-    margin-block: 1rem;
-    overflow-x: auto;
   }
 
   .market-themes {
-    display: table;
-    width: 100%;
-    min-width: 46rem;
-    margin: 0;
-
     td:first-child,
     td:nth-child(2),
     td:nth-child(3) {
