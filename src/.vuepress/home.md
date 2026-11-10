@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 10일(화)에 나온 기사 162건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-10.md)
+2026년 11월 10일(화)에 나온 기사 226건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-10.md)
 
 ::: v-pre
 
-- ["정부 AI 활용, 아직 81%가 실험 단계"…OECD, 알고리즘 시대 정부 소통체계 전면 개혁 촉구](https://www.aitimes.kr/news/articleView.html?idxno=42672)
-  <small>인공지능신문 · 12:39</small>
-- [AI 코딩 도입했더니 같은 인력으로 소프트웨어 출시량 20배…오픈AI, 코드래빗 사례 공개](https://www.aitimes.kr/news/articleView.html?idxno=42671)
-  <small>인공지능신문 · 12:24</small>
-- [산곡2동 주민자치회, 인공지능 활용 맞춤형 역량 강화 교육 실시](http://www.surprisenews.kr/news/articleView.html?idxno=722457)
-  <small>서프라이즈뉴스 · 12:21</small>
-- ["인공지능은 일의 본질을 변화시키지만, 인간을 완전히 대체하지는 않습니다\."](https://www.vietnam.vn/ko/ai-thay-doi-ban-chat-cong-viec-khong-thay-the-hoan-toan-con-nguoi)
-  <small>Vietnam\.vn · 12:17</small>
-- [미 의회, AI 데이터센터 건설 촉진법 심의…민주당 내부 반발](https://www.aitimes.com/news/articleView.html?idxno=217210)
-  <small>AI타임스 · 12:16</small>
+- [디즈니, 어도비와 전용 AI 모델 공동 개발…영화·테마파크로 확대](https://www.aitimes.com/news/articleView.html?idxno=217221)
+  <small>AI타임스 · 16:47</small>
+- [인공지능이라는 진짜 괴물 \[유레카\]](https://www.hani.co.kr/arti/opinion/column/1286642.html)
+  <small>한겨레 · 16:45</small>
+- [DGIST-삼우그룹, 지역 산업 ‘인공지능 전환(AX)’ 생태계 강화 업무협약](https://news.bbsi.co.kr/news/articleView.html?idxno=4117746)
+  <small>BBS불교방송 · 16:37</small>
+- [LGU+, 국내 통신사 최초 ‘자동차 사이버보안’ 국제표준 레벨3 인증](https://www.aitimes.com/news/articleView.html?idxno=217219)
+  <small>AI타임스 · 16:35</small>
+- [한강 생태, 이제 귀여운 AI로봇이 알려드려요](https://www.asiatoday.co.kr/kn/view.php?key=20261110010003741)
+  <small>아시아투데이 · 16:33</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 10일(화)에 나온 기사 25건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-10.md)
+2026년 11월 10일(화)에 나온 기사 58건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-10.md)
 
 ::: v-pre
 
-- [직업계고, AI·로봇 중심 탈바꿈… 올 117개 학과 대수술\[ ‘17세의 기술’ 대한민국을 만든다 \]](https://www.munhwa.com/article/11630255)
-  <small>문화일보 · 12:09</small>
-- [日 AI로봇협회, 로봇 파운데이션 모델 'AIRoA-0' 공개](https://www.irobotnews.com/news/articleView.html?idxno=49498)
-  <small>로봇신문 · 11:49</small>
-- [獨 인피니언-美 퀄컴, 자율주행용 자동차 컴퓨터 개발 협력](https://www.irobotnews.com/news/articleView.html?idxno=49499)
-  <small>로봇신문 · 11:46</small>
-- [바카티오, CES 2027 로보틱스 부문 혁신상 수상](https://www.irobotnews.com/news/articleView.html?idxno=49497)
-  <small>로봇신문 · 11:36</small>
-- [MDS테크, ‘2026 로보월드’서 글로벌 파트너와 피지컬 AI 솔루션 선보여](https://www.irobotnews.com/news/articleView.html?idxno=49496)
-  <small>로봇신문 · 11:29</small>
+- [한강 생태, 이제 귀여운 AI로봇이 알려드려요](https://www.asiatoday.co.kr/kn/view.php?key=20261110010003741)
+  <small>아시아투데이 · 16:33</small>
+- [남부발전, 4족 보행로봇 '척돌이'로 발전소 안전 사각지대 없앤다](https://www.energydaily.co.kr/news/articleView.html?idxno=204934)
+  <small>에너지데일리 · 16:17</small>
+- ["종이접기 영재서 로봇공학도로"…옥스퍼드서 꿈 키우는 강준규](https://www.yna.co.kr/view/AKR20261110132500371)
+  <small>연합뉴스 · 16:14</small>
+- [구미시, 中 로봇산업 공략…휴머노이드 승부수](https://www.asiae.co.kr/article/2026111015281650878)
+  <small>아시아경제 · 15:34</small>
+- [오늘의 로봇 기업 주식 시세(2026-11-10)](https://www.irobotnews.com/news/articleView.html?idxno=49506)
+  <small>로봇신문 · 15:34</small>
 
 :::
