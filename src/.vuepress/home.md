@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 10일(화)에 나온 기사 226건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-10.md)
+2026년 11월 11일(수)에 나온 기사 27건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-11.md)
 
 ::: v-pre
 
-- [디즈니, 어도비와 전용 AI 모델 공동 개발…영화·테마파크로 확대](https://www.aitimes.com/news/articleView.html?idxno=217221)
-  <small>AI타임스 · 16:47</small>
-- [인공지능이라는 진짜 괴물 \[유레카\]](https://www.hani.co.kr/arti/opinion/column/1286642.html)
-  <small>한겨레 · 16:45</small>
-- [DGIST-삼우그룹, 지역 산업 ‘인공지능 전환(AX)’ 생태계 강화 업무협약](https://news.bbsi.co.kr/news/articleView.html?idxno=4117746)
-  <small>BBS불교방송 · 16:37</small>
-- [LGU+, 국내 통신사 최초 ‘자동차 사이버보안’ 국제표준 레벨3 인증](https://www.aitimes.com/news/articleView.html?idxno=217219)
-  <small>AI타임스 · 16:35</small>
-- [한강 생태, 이제 귀여운 AI로봇이 알려드려요](https://www.asiatoday.co.kr/kn/view.php?key=20261110010003741)
-  <small>아시아투데이 · 16:33</small>
+- [농업도 인공지능으로 똑똑하게](https://www.megaccnews.com/news/articleView.html?idxno=14657)
+  <small>메가충청뉴스 · 06:17</small>
+- [Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI](https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/)
+  <small>Ars Technica · 06:12</small>
+- [OpenAI acquires Odessia, travel startup created by Sonder founder](https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/)
+  <small>TechCrunch · 06:08</small>
+- [\[인공지능 줌인\] “전력 확보에 비상 걸렸다”…AI 데이터센터 폭주에 ‘중고 비행기 제트 엔진’까지 싹쓸이](https://www.wikileaks-kr.org/news/articleView.html?idxno=194402)
+  <small>위키리크스한국 · 06:03</small>
+- ["AI가 제안하고 연구자가 검증"…한미·대웅, 신약개발 혁신 가속](http://m.yakup.com/news/index.html?mode=view&nid=335039)
+  <small>약업신문 · 06:01</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 10일(화)에 나온 기사 58건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-10.md)
+2026년 11월 11일(수)에 나온 기사 6건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-11.md)
 
 ::: v-pre
 
-- [한강 생태, 이제 귀여운 AI로봇이 알려드려요](https://www.asiatoday.co.kr/kn/view.php?key=20261110010003741)
-  <small>아시아투데이 · 16:33</small>
-- [남부발전, 4족 보행로봇 '척돌이'로 발전소 안전 사각지대 없앤다](https://www.energydaily.co.kr/news/articleView.html?idxno=204934)
-  <small>에너지데일리 · 16:17</small>
-- ["종이접기 영재서 로봇공학도로"…옥스퍼드서 꿈 키우는 강준규](https://www.yna.co.kr/view/AKR20261110132500371)
-  <small>연합뉴스 · 16:14</small>
-- [구미시, 中 로봇산업 공략…휴머노이드 승부수](https://www.asiae.co.kr/article/2026111015281650878)
-  <small>아시아경제 · 15:34</small>
-- [오늘의 로봇 기업 주식 시세(2026-11-10)](https://www.irobotnews.com/news/articleView.html?idxno=49506)
-  <small>로봇신문 · 15:34</small>
+- [\[스타트UP\] 쓰던 로봇도 AI 로봇으로…올에이아이의 제어 기술](https://biz.chosun.com/industry/business-venture/2026/11/11/YYXWT35ZHVC43LYW3V24MWLVNM/)
+  <small>Chosunbiz · 06:00</small>
+- [약국 들어온 휴머노이드 로봇\.\.\.약장 살피고 주문까지 척척](https://www.kpanews.co.kr/news/articleView.html?idxno=548573)
+  <small>약사공론 · 05:53</small>
+- [글로벌 부품사의 로봇 실증 경쟁, 부품 공급을 넘어선 양산 현장 전면 개방](https://www.g-enews.com/article/Global-Biz/2026/11/2026111021084799272bd56fbc3c_1)
+  <small>글로벌이코노믹 · 03:50</small>
+- [Dynamic Creatures partners with Sixth Wall Studio to bring Hasbro characters to life with robots](https://www.therobotreport.com/dynamic-creatures-partners-sixth-wall-studio-bring-hasbro-characters-life-with-robots/)
+  <small>The Robot Report · 03:31</small>
+- [Why predictive maintenance matters more as factories add robots](https://www.therobotreport.com/why-predictive-maintenance-matters-more-as-factories-add-robots/)
+  <small>The Robot Report · 01:13</small>
 
 :::
