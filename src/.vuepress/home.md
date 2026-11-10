@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 10일(화)에 나온 기사 140건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-10.md)
+2026년 11월 10일(화)에 나온 기사 162건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-10.md)
 
 ::: v-pre
 
-- [블랙홀 난제 풀고 로봇도 움직인다…앤트로픽, 나스닥 상장 앞두고 차세대 AI '클로드 페이블 5\.2·미토스 5\.2' 공개](https://www.aitimes.kr/news/articleView.html?idxno=42669)
-  <small>인공지능신문 · 11:27</small>
-- [딥엑스, 초저전력 AI 반도체 'DX-M2' 설계 완료\.\.\.내년 하반기 양산 채비](https://www.aitimes.com/news/articleView.html?idxno=217204)
-  <small>AI타임스 · 11:24</small>
-- [어업 계절근로자 보험 의무화 첫해…정부, 고용 어가 160곳 점검](https://www.aitimes.com/news/articleView.html?idxno=217201)
-  <small>AI타임스 · 11:21</small>
-- [전남 직업계고 취업 증가분 88\.5% 타지역에서…광주는 관내 취업 늘어](https://www.aitimes.com/news/articleView.html?idxno=217200)
-  <small>AI타임스 · 11:20</small>
-- [북미 태양광 PPA 제시가격 4\.9% 상승…미국 12월 관세 선반영](https://www.aitimes.com/news/articleView.html?idxno=217152)
-  <small>AI타임스 · 11:20</small>
+- ["정부 AI 활용, 아직 81%가 실험 단계"…OECD, 알고리즘 시대 정부 소통체계 전면 개혁 촉구](https://www.aitimes.kr/news/articleView.html?idxno=42672)
+  <small>인공지능신문 · 12:39</small>
+- [AI 코딩 도입했더니 같은 인력으로 소프트웨어 출시량 20배…오픈AI, 코드래빗 사례 공개](https://www.aitimes.kr/news/articleView.html?idxno=42671)
+  <small>인공지능신문 · 12:24</small>
+- [산곡2동 주민자치회, 인공지능 활용 맞춤형 역량 강화 교육 실시](http://www.surprisenews.kr/news/articleView.html?idxno=722457)
+  <small>서프라이즈뉴스 · 12:21</small>
+- ["인공지능은 일의 본질을 변화시키지만, 인간을 완전히 대체하지는 않습니다\."](https://www.vietnam.vn/ko/ai-thay-doi-ban-chat-cong-viec-khong-thay-the-hoan-toan-con-nguoi)
+  <small>Vietnam\.vn · 12:17</small>
+- [미 의회, AI 데이터센터 건설 촉진법 심의…민주당 내부 반발](https://www.aitimes.com/news/articleView.html?idxno=217210)
+  <small>AI타임스 · 12:16</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 10일(화)에 나온 기사 16건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-10.md)
+2026년 11월 10일(화)에 나온 기사 25건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-10.md)
 
 ::: v-pre
 
-- [전국 학생 330명, 한기대서 ‘물류로봇 기술’ 맞대결](http://www.ccnnews.co.kr/news/articleView.html?idxno=417497)
-  <small>충청뉴스 · 11:06</small>
-- [로봇 '휴보'·최초 위성 '우리별' 기록물, 국가중요과학기술자료에 이름 올려](https://www.dongascience.com/ko/news/80794)
-  <small>DongA Science · 10:43</small>
-- [상명대, '로보월드 4족보행로봇 경진대회' 2·3위 동시 석권](http://www.ccnnews.co.kr/news/articleView.html?idxno=417488)
-  <small>충청뉴스 · 10:34</small>
-- [로봇·드론 앞서가는 中… 싼 값에 ‘AI 출혈경쟁’ 불사\[차이나 쇼크 3\.0\]](https://www.munhwa.com/article/11630135)
-  <small>문화일보 · 10:28</small>
-- [한국 로봇 역사 쓴 '휴보', 국가과학유산 됐다](https://stock.mk.co.kr/news/view/1194718)
-  <small>매일경제 마켓 · 10:23</small>
+- [직업계고, AI·로봇 중심 탈바꿈… 올 117개 학과 대수술\[ ‘17세의 기술’ 대한민국을 만든다 \]](https://www.munhwa.com/article/11630255)
+  <small>문화일보 · 12:09</small>
+- [日 AI로봇협회, 로봇 파운데이션 모델 'AIRoA-0' 공개](https://www.irobotnews.com/news/articleView.html?idxno=49498)
+  <small>로봇신문 · 11:49</small>
+- [獨 인피니언-美 퀄컴, 자율주행용 자동차 컴퓨터 개발 협력](https://www.irobotnews.com/news/articleView.html?idxno=49499)
+  <small>로봇신문 · 11:46</small>
+- [바카티오, CES 2027 로보틱스 부문 혁신상 수상](https://www.irobotnews.com/news/articleView.html?idxno=49497)
+  <small>로봇신문 · 11:36</small>
+- [MDS테크, ‘2026 로보월드’서 글로벌 파트너와 피지컬 AI 솔루션 선보여](https://www.irobotnews.com/news/articleView.html?idxno=49496)
+  <small>로봇신문 · 11:29</small>
 
 :::
