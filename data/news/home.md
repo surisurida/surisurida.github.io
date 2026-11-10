@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 9일(월)에 나온 기사 101건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-09.md)
+2026년 11월 10일(화)에 나온 기사 97건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-10.md)
 
 ::: v-pre
 
-- [삼성·현대차그룹, 미래 모빌리티·피지컬 AI 선점 위해 ‘원팀’ 구축…반도체·배터리·로봇 기술 결집](https://www.aitimes.kr/news/articleView.html?idxno=42661)
-  <small>인공지능신문 · 23:51</small>
-- [아마존, 글로벌 의료 격차 해소에 1억달러 투입…에이전틱 AI로 진단·의료 연구·식량 지원 확대](https://www.aitimes.kr/news/articleView.html?idxno=42660)
-  <small>인공지능신문 · 23:31</small>
-- [시험 중 계속 안경테 ‘만지작’…중·고교서도 AI 안경 부정행위 적발](https://www.chosun.com/national/education/2026/11/09/N7NC7IFK5FCPDB3YR6BBGQM554/)
-  <small>조선일보 · 23:24</small>
-- [구글, 엔비디아 추격 박차…AI 반도체 'TPU' 제품군 확대](https://news.einfomax.co.kr/news/articleView.html?idxno=4443827)
-  <small>연합인포맥스 · 23:10</small>
-- [Automattic debuts a platform to deploy vibe-coding apps amid a changing internet](https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/)
-  <small>TechCrunch · 23:00</small>
+- [\[속보\]李대통령 "반도체, 인공지능 핵심 전략산업 경쟁력 정교하게 다듬어야" - 머니투데이](https://www.mt.co.kr/index.php/politics/2026/11/10/2026111010062335965)
+  <small>머니투데이 · 10:07</small>
+- [와치텍, 공공솔루션마켓서 AI 통합관제·예방점검 기반 IT 운영 전략 제시](https://www.etnews.com/20261110000100)
+  <small>전자신문 · 09:59</small>
+- [출판협회, AI 학습용 데이터 공급 체계 구축 나서](https://www.yna.co.kr/view/AKR20261110051500005)
+  <small>연합뉴스 · 09:56</small>
+- [오픈AI 의장 "미국, AI 주도해야 한다…경제 가치 주목해야"](https://news.einfomax.co.kr/news/articleView.html?idxno=4443907)
+  <small>연합인포맥스 · 09:55</small>
+- [NHN "AI 데이터센터 내년 말까지 100MW 규모로 확장"(종합2보)](https://www.koreancenter.or.kr/news/articleView.html?idxno=1437115)
+  <small>연합뉴스 한민족센터 · 09:55</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 9일(월)에 나온 기사 76건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-09.md)
+2026년 11월 10일(화)에 나온 기사 9건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-10.md)
 
 ::: v-pre
 
-- ["교실에서 바로 공장으로"…충남교육청·레인보우로보틱스, 로봇 인재 양성 동맹](http://www.asannews.co.kr/sub_read.html?uid=65984§ion=sc4§ion2=)
-  <small>아산뉴스 · 23:11</small>
-- [Can Agentic Robotics Solve Robotics’ Data Scaling Problem?](https://spectrum.ieee.org/agentic-robotics)
-  <small>IEEE Spectrum · 23:00</small>
-- [용접할 곳도 스스로 찾는다…중국의 '용접 로봇'](https://www.etnews.com/20261109000285)
-  <small>전자신문 · 22:30</small>
-- [2026 로보월드, 대한민국 로봇산업의 희망을 보았다\.](https://www.irobotnews.com/news/articleView.html?idxno=49490)
-  <small>로봇신문 · 22:06</small>
-- [피지클, 로봇 AI 학습용 고정밀 시뮬레이션 개발…1000만달러 투자 유치](https://www.irobotnews.com/news/articleView.html?idxno=49485)
-  <small>로봇신문 · 20:24</small>
+- [특징주, 대동기어-로봇(산업용\/협동로봇 등) 테마 상승세에 7\.54% ↑](https://stock.mk.co.kr/news/view/1194684)
+  <small>매일경제 마켓 · 09:48</small>
+- ["웨어러블 로봇도 청바지처럼 입어보고 산다"…피팅숍에 렌털까지 등장](https://www.chosun.com/economy/tech_it/2026/11/09/F4TJBVNPMNFUHKPIZ7MVTTGRLI/)
+  <small>조선일보 · 07:09</small>
+- [앤트로픽, 로봇 제어와 에이전트 강화한 AI '페이블·미토스 5\.2' 공개](https://www.etnews.com/20261110000009)
+  <small>전자신문 · 07:08</small>
+- [NVIDIA launches GR00T 2 and Isaac Lab 3\.0 at CoRL](https://www.therobotreport.com/nvidia-launches-gr00t-2-isaac-lab-3-0-corl/)
+  <small>The Robot Report · 06:52</small>
+- [편의점 직원 된 휴머노이드 로봇…24시간 근무 도전](https://www.etnews.com/20261109000425)
+  <small>전자신문 · 06:00</small>
 
 :::
