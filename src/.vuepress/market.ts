@@ -3,9 +3,13 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 const MARKET_DIR = new URL("../news/market/", import.meta.url);
 const WEEKDAYS = "일월화수목금토";
 
+// 페이지의 카드 이름은 HTML 문맥이라 S&amp;P500처럼 엔티티로 쓰일 수 있다.
+const decodeHtml = (text: string) =>
+  text.replace(/&amp;/gu, "&").replace(/&#38;/gu, "&").replace(/&quot;/gu, '"').replace(/&#39;/gu, "'");
+
 /**
  * 증시 전망(src/news/market/)의 날짜별 페이지 이름(YYYY-MM-DD)을 최신순으로 돌려줍니다.
- * 페이지는 scripts/write_market_brief.py가 배포 때 만드는 일회성 파일이라, 아직 없으면 빈 목록입니다.
+ * 페이지는 scripts/write_market_brief.py가 로컬 스케줄러에서 만드는 일회성 파일이라, 아직 없으면 빈 목록입니다.
  * 메뉴·메인 요약·/news/market/ 이동은 빌드 시점의 이 목록을 씁니다.
  */
 export const marketDates = (): string[] =>
@@ -40,6 +44,6 @@ export const marketSummary = (
     link: `/news/market/${date}.html`,
     title: `${date} 증시 전망`,
     briefing: `${year}년 ${month}월 ${day}일(${weekday}) 브리핑입니다. 미국은 ${usClose} 뉴욕 정규장 종가 기준입니다.`,
-    changes: changes.map(([, name, change]) => `${name} ${change}`).join(" · "),
+    changes: changes.map(([, name, change]) => `${decodeHtml(name)} ${change}`).join(" · "),
   };
 };

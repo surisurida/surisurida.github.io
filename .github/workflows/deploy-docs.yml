@@ -3,9 +3,6 @@ name: Deploy Docs
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "17 3,8,11 * * *"
-      timezone: 'Asia/Seoul'
   workflow_dispatch:
 
 permissions:
@@ -13,19 +10,17 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false   # 증시 전망을 쓰는 중에 취소되면 쓴 비용이 버려지므로 끝날 때까지 기다린다.
+  cancel-in-progress: false   # 배포 도중 취소되지 않도록 끝날 때까지 기다린다.
 
 jobs:
   build:
     # ubuntu-latest가 가리키는 이미지가 바뀌어도 그대로 돌도록 버전을 고정한다.
-    # 증시 전망 작성은 명령 격리(bubblewrap·socat 설치, AppArmor 해제)를 준비하지 못하면 배포를 멈추지 않고 건너뛰므로,
-    # 이미지를 바꾼 뒤에는 '명령 격리를 준비하지 못해' 경고가 없는지 로그에서 확인한다.
     runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0   # 테마의 '마지막 수정일' 표시용 git 기록
-          persist-credentials: false   # 웹 자료를 읽는 증시 전망 작성 단계에 저장소 토큰을 남기지 않는다.
+          persist-credentials: false   # 빌드 단계에서 저장소 토큰을 남기지 않는다.
 
       - uses: pnpm/action-setup@v5
 
@@ -35,45 +30,6 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
-
-      - run: pnpm test
-
-      - uses: astral-sh/setup-uv@v10.3.0
-        with:
-          cache-dependency-glob: scripts/fetch_news.py   # 스크립트의 의존성 선언이 바뀌면 캐시 갱신
-
-      # 뉴스 사이트 장애로 배포가 멈추지 않도록, 실패하면 저장소에 있는 기존 뉴스 페이지로 빌드한다.
-      - name: 최신 뉴스 수집
-        run: uv run scripts/fetch_news.py
-        continue-on-error: true
-
-      # 증시 전망도 커밋하지 않는 일회성 페이지다. 작성 비용 때문에 평일 하루 한 번만 쓰고,
-      # 그 사이의 배포는 캐시에서 되살린 페이지를 쓴다. 저장소 변수 MARKET_BRIEF_FORCE가 Y이면 조건과 관계없이 쓴다.
-      - name: 직전 증시 전망 복원
-        uses: actions/cache/restore@v6
-        with:
-          path: src/news/market
-          key: market-brief-${{ github.run_id }}-${{ github.run_attempt }}   # 재실행 때 강제로 쓴 페이지도 보관되도록 회차를 넣는다.
-          restore-keys: market-brief-
-
-      # 작성하지 못하면 직전 페이지로 계속 빌드하고, 위반을 찾으면 실패해 배포를 중단한다.
-      - name: 증시 전망 작성
-        id: market
-        timeout-minutes: 55
-        run: uv run scripts/write_market_brief.py
-        env:
-          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          MARKET_BRIEF_FORCE: ${{ vars.MARKET_BRIEF_FORCE }}
-
-      # 되살리거나 새로 쓴 증시 전망까지 포함해 다시 검사한다.
-      - run: pnpm test
-
-      - name: 증시 전망 보관
-        if: steps.market.outputs.created == 'true'
-        uses: actions/cache/save@v6
-        with:
-          path: src/news/market
-          key: market-brief-${{ github.run_id }}-${{ github.run_attempt }}
 
       - run: pnpm docs:build
 

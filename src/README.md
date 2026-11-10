@@ -10,7 +10,7 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
 bgImageStyle:
   background-attachment: fixed
 heroText: 뉴스 허브
-tagline: 수리 페이지에서 제공하는 정보는 AI로 최신 정보를 수집하고 있습니다.
+tagline: 수리 페이지에서 제공하는 정보는 AI로 수집하고 있습니다.
 
 footer: 이메일무단수집거부
 copyright: © 수리 2026
@@ -28,7 +28,7 @@ containerClass: news-page
 
 </template>
 
-<!-- @include: ../data/news/home.md -->
+<!-- @include: ./.vuepress/home.md -->
 
 <div class="contact-box">
 

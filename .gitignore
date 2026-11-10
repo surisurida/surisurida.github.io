@@ -1,10 +1,11 @@
 # node modules
-node_modules
+node_modules/
 
 # MacOS desktop services store
 .DS_Store
 
 # Log files
+logs/
 *.log
 
 # Meta files
@@ -18,11 +19,16 @@ TODOs.md
 .cache
 
 # Docs dist directory
-src/.vuepress/dist
+src/.vuepress/dist/
 
 # AI
 .claude
 
-# Generated pages
-/data
-/src/news
+# Python
+scripts/
+
+# 수집한 기사 데이터 (로컬 전용)
+data/
+
+# Test files
+tests/
