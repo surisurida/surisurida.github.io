@@ -12,7 +12,7 @@ bgImageStyle:
 heroText: 뉴스 허브
 tagline: 수리 페이지에서 제공하는 정보는 AI로 수집하고 있습니다.
 
-footer: 이메일무단수집거부
+footer: <a href="/email.html">이메일무단수집거부</a> · <a href="/privacy.html">개인정보처리방침</a>
 copyright: © 수리 2026
 containerClass: news-page
 ---

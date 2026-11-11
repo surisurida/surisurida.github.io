@@ -25,7 +25,7 @@ export default hopeTheme({
       // sidebar
       sidebar: koSidebar,
 
-      footer: "수리 페이지",
+      footer: "<a href=\"/email.html\">이메일무단수집거부</a> · <a href=\"/privacy.html\">개인정보처리방침</a>",
 
       displayFooter: true,
 
