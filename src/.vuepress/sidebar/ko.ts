@@ -1,9 +1,10 @@
 import { sidebar } from "vuepress-theme-hope";
 
-import { marketDates } from "../market.js";
+import { marketPageNames } from "../market.js";
 import { newsDates } from "../news.js";
 
-const marketPages = marketDates();
+// 일일(YYYY-MM-DD)과 주간(YYYY-MM-DD 주간) 페이지를 같은 증시 전망 목록에 싣는다.
+const marketPages = marketPageNames();
 const aiDates = newsDates("ai");
 const robotDates = newsDates("robot");
 

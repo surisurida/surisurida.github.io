@@ -5,8 +5,8 @@ title: Home
 heroImage: https://pjy.kr/logo.svg
 heroImageStyle:
   max-height: 10rem
-bgImage: https://theme-hope-assets.vuejs.press/bg/2-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/2-dark.svg
+bgImage: https://pjy.kr/bloom-light.webp
+bgImageDark: https://pjy.kr/bloom-dark.webp
 bgImageStyle:
   background-attachment: fixed
 heroText: 뉴스 허브

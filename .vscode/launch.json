@@ -10,10 +10,10 @@
       "runtimeArgs": ["run", "docs:dev"],
       "restart": true,
       "serverReadyAction": {
-        "action": "debugWithEdge",
-        "pattern": "https?://localhost:.*m([0-9]+)",
-        "uriFormat": "http://localhost:%s",
-        "webRoot": "${workspaceFolder}"
+          "action": "debugWithEdge",
+          "pattern": "https?://localhost:.*m([0-9]+)",
+          "uriFormat": "http://localhost:%s",
+          "webRoot": "${workspaceFolder}"
       }
     }
   ]

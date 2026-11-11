@@ -22,6 +22,25 @@ export const marketDates = (): string[] =>
     : [];
 
 /**
+ * 주간 전망(src/news/market/YYYY-MM-DD 주간.md)의 파일 이름(확장자 제외)을 최신순으로 돌려줍니다.
+ * 일일 증시 전망과 파일 이름이 달라 marketDates와 른로 읽습니다.
+ */
+export const weeklyDates = (): string[] =>
+  existsSync(MARKET_DIR)
+    ? readdirSync(MARKET_DIR)
+        .filter((name) => /^\d{4}-\d{2}-\d{2} 주간\.md$/u.test(name))
+        .map((name) => name.replace(/\.md$/u, ""))
+        .sort()
+        .reverse()
+    : [];
+
+/**
+ * 증시 전망 카테고리에 함께 싣는 페이지 이름을 최신순으로 돌려줍니다.
+ * 일일 페이지(YYYY-MM-DD)와 주간 페이지(YYYY-MM-DD 주간)를 날짜 순서로 섞습니다.
+ */
+export const marketPageNames = (): string[] => [...marketDates(), ...weeklyDates()].sort().reverse();
+
+/**
  * 메인 페이지의 증시 전망 구획에 넣을 문구를 날짜별 페이지 본문에서 읽어 만듭니다.
  * 페이지 형식이 어긋나면 잘못된 요약이 나가지 않도록 오류를 냅니다.
  */

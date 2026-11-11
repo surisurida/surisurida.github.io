@@ -1,7 +1,16 @@
 {
     "chat.tools.terminal.autoApprove": {
-        "git check-ignore": true,
+        "git": true,
         "pnpm": true,
-        "uv": true
+        "uv": true,
+        "ForEach-Object": true,
+        "Tee-Object": true,
+        "node": true,
+        "Get-ChildItem": true,
+        "Select-Object": true,
+        "Select-String": true,
+        "Write-Output": true,
+        "Out-File": true,
+        "code": true
     }
 }

@@ -57,6 +57,12 @@
   }
 }
 
+// 증시 페이지의 안내 문구(출처·AI 작성 안내)는 일일·주간 페이지가 같은 모양을 씁니다.
+.market-page [vp-content] .market-note,
+.weekly-page [vp-content] .market-note {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-mute);
+}
 // 증시 전망 날짜 페이지 (frontmatter에 containerClass: market-page가 있습니다.)
 // 등락 색은 국내 관례대로 상승은 빨강, 하락은 파랑이며, 색만으로 구분되지 않게 ▲·▼를 함께 씁니다.
 .market-page [vp-content] {
@@ -66,11 +72,6 @@
   [data-theme="dark"] & {
     --market-up: #ff8a80;
     --market-down: #82b1ff;
-  }
-
-  .market-note {
-    font-size: 0.875rem;
-    color: var(--vp-c-text-mute);
   }
 
   .market-cards {
@@ -185,31 +186,32 @@
   .market-themes__down .market-themes__heading {
     color: var(--market-down);
   }
+}
 
-  // 투자 주의사항 및 면책 조항: 메인 페이지의 문의 채널과 같은 박스로 보이게 합니다.
-  // 페이지는 자동으로 쓰이고 캐시에서 되살린 지난 페이지도 함께 보여야 해서 마크다운은 그대로 두고,
-  // 맨 끝의 제목 문단(굵은 글씨만 있음)과 본문 문단을 박스의 위·아래 절반으로 그려 하나로 잇습니다.
-  #markdown-content {
-    > hr:has(+ p:nth-last-child(2) > strong:only-child) {
-      display: none; // 박스가 구획을 나누므로 앞의 구분선은 숨깁니다.
-    }
+// 투자 주의사항 및 면책 조항: 메인 페이지의 문의 채널과 같은 박스로 보이게 합니다.
+// 일일 증시 전망과 주간 증시 페이지가 같은 모양을 씁니다.
+// 페이지는 자동으로 쓰이고 캐시에서 되살린 지난 페이지도 함께 보여야 해서 마크다운은 그대로 두고,
+// 맨 끝의 제목 문단(굵은 글씨만 있음)과 본문 문단을 박스의 위·아래 절반으로 그려 하나로 잇습니다.
+:is(.market-page, .weekly-page) [vp-content] #markdown-content {
+  > hr:has(+ p:nth-last-child(2) > strong:only-child) {
+    display: none; // 박스가 구획을 나누므로 앞의 구분선은 숨깁니다.
+  }
 
-    > p:nth-last-child(2):has(> strong:only-child) {
-      @include notice-box;
-      margin-bottom: 0;
-      padding-bottom: 0.25rem;
-      border-bottom: 0;
-      border-end-start-radius: 0;
-      border-end-end-radius: 0;
-    }
+  > p:nth-last-child(2):has(> strong:only-child) {
+    @include notice-box;
+    margin-bottom: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 0;
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
 
-    > p:has(> strong:only-child) + p:last-child {
-      @include notice-box;
-      margin-top: 0;
-      padding-top: 0.25rem;
-      border-top: 0;
-      border-start-start-radius: 0;
-      border-start-end-radius: 0;
-    }
+  > p:has(> strong:only-child) + p:last-child {
+    @include notice-box;
+    margin-top: 0;
+    padding-top: 0.25rem;
+    border-top: 0;
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
   }
 }
