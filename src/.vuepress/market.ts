@@ -3,7 +3,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 const MARKET_DIR = new URL("../news/market/", import.meta.url);
 const WEEKDAYS = "일월화수목금토";
 
-// 페이지의 카드 이름은 HTML 문맥이라 S&amp;P500처럼 엔티티로 쓰일 수 있다.
+// 페이지의 카드 이름은 HTML 문맥이라 S&amp;P500처럼 엔티티로 쓰일 수 있습니다.
 const decodeHtml = (text: string) =>
   text.replace(/&amp;/gu, "&").replace(/&#38;/gu, "&").replace(/&quot;/gu, '"').replace(/&#39;/gu, "'");
 
