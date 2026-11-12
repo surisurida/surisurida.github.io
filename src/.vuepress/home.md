@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 12일(목)에 나온 기사 127건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-12.md)
+2026년 11월 13일(금)에 나온 기사 42건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-13.md)
 
 ::: v-pre
 
-- [중국 AI주 급락 속 알리바바, 반도체 자회사 'T-헤드' 홍콩 상장 추진](https://www.aitimes.com/news/articleView.html?idxno=217335)
-  <small>AI타임스 · 16:40</small>
-- [안효정 제주대 교수 “학생들이 개발한 AI 기억 인형 장관상 수상…현장형 AI 교육의 성과”](https://news.bbsi.co.kr/news/articleView.html?idxno=4118289)
-  <small>BBS불교방송 · 16:31</small>
-- [\[KOREN 31주년\]김형철 NIA 원장 “소버린 AI 네트워크 실증 기반 도약”](https://www.etnews.com/20261112000082)
-  <small>전자신문 · 16:30</small>
-- [\[KOREN 31주년\]차세대 선도 시험망 도약, AI 네트워크 강국 지원군으로 '우뚝'](https://www.etnews.com/20261112000107)
-  <small>전자신문 · 16:30</small>
-- [슈나이더 일렉트릭, AI 데이터센터용 냉각수 분배 장치 출시](https://www.thelec.kr/news/articleView.html?idxno=65338)
-  <small>디일렉 · 16:27</small>
+- [미국, 중국의 해외 GPU 임대 규제 추진…중국 기업들 확보 서둘러](https://www.aitimes.com/news/articleView.html?idxno=217351)
+  <small>AI타임스 · 06:33</small>
+- [Nebius tests the neocloud playbook with \$40 billion in planned spending](https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/)
+  <small>TechCrunch · 06:27</small>
+- [인공지능‧증강현실 접목 차세대 맞춤형 뷰티 쇼핑](http://m.yakup.com/news/index.html?mode=view&pmode=&cat=12&cat2=&nid=335145&num_start=)
+  <small>약업닷컴 · 06:03</small>
+- [\[영상\] 제약바이오산업, AI 도입 어떻게?](http://www.yakup.com/news/index.html?mode=view&cat=12&nid=335161)
+  <small>약업닷컴 · 06:01</small>
+- [젠슨 황 떠난 엔비디아, '실질적 2인자' 크레스가 임시 CEO 맡아](https://www.aitimes.com/news/articleView.html?idxno=217350)
+  <small>AI타임스 · 05:56</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 12일(목)에 나온 기사 57건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-12.md)
+2026년 11월 13일(금)에 나온 기사 5건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-13.md)
 
 ::: v-pre
 
-- [中 통신사-유비테크 맞손, '휴머노이드' 가정 내 보급키로](https://www.irobotnews.com/news/articleView.html?idxno=49552)
-  <small>로봇신문 · 16:44</small>
-- [\[의학바이오게시판\] 로앤서지컬, 국산 수술로봇 최초 제주-서울 원격수술 시연](https://www.dongascience.com/ko/news/80858)
-  <small>DongA Science · 16:41</small>
-- [로봇에 팁을 주라고?](https://www.chosun.com/kid/kid_nie/2026/11/12/32NSL7J54VC2RKSU5MF4VXELKQ/)
-  <small>조선일보 · 16:41</small>
-- [日 산업용 로봇, 3분기 수주액 46\.6% 증가…4분기 연속 최고치 경신](https://www.irobotnews.com/news/articleView.html?idxno=49548)
-  <small>로봇신문 · 16:34</small>
-- [\[포토\] 로봇이 그려주는 캐리커처](https://www.etnews.com/20261112000420)
-  <small>전자신문 · 16:19</small>
+- [NVIDIA replaces CEO amid China AI and robotics concerns](https://www.therobotreport.com/nvidia-replaces-ceo-amid-china-ai-and-robotics-concerns/)
+  <small>The Robot Report · 01:33</small>
+- [中 레노버, 오티스와 '엘리베이터 설치 로봇' 발표](https://www.irobotnews.com/news/articleView.html?idxno=49564)
+  <small>로봇신문 · 01:00</small>
+- [中 '사과 수확 로봇' 기술 표준 발표](https://www.irobotnews.com/news/articleView.html?idxno=49562)
+  <small>로봇신문 · 00:51</small>
+- [KISTEP "한국 휴머노이드 경쟁력, 하드웨어 넘어 AI·데이터 생태계로 확장해야"](https://www.irobotnews.com/news/articleView.html?idxno=49560)
+  <small>로봇신문 · 00:14</small>
+- [한국, 제조업 로봇밀도 세계 1위…근로자 1만명당 1066대](https://www.irobotnews.com/news/articleView.html?idxno=49559)
+  <small>로봇신문 · 00:02</small>
 
 :::
