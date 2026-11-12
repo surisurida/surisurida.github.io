@@ -1,7 +1,6 @@
 ---
 home: true
 icon: house
-title: Home
 heroImage: https://pjy.kr/logo.svg
 heroImageStyle:
   max-height: 10rem
