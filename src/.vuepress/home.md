@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 13일(금)에 나온 기사 42건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-13.md)
+2026년 11월 13일(금)에 나온 기사 116건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-13.md)
 
 ::: v-pre
 
-- [미국, 중국의 해외 GPU 임대 규제 추진…중국 기업들 확보 서둘러](https://www.aitimes.com/news/articleView.html?idxno=217351)
-  <small>AI타임스 · 06:33</small>
-- [Nebius tests the neocloud playbook with \$40 billion in planned spending](https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/)
-  <small>TechCrunch · 06:27</small>
-- [인공지능‧증강현실 접목 차세대 맞춤형 뷰티 쇼핑](http://m.yakup.com/news/index.html?mode=view&pmode=&cat=12&cat2=&nid=335145&num_start=)
-  <small>약업닷컴 · 06:03</small>
-- [\[영상\] 제약바이오산업, AI 도입 어떻게?](http://www.yakup.com/news/index.html?mode=view&cat=12&nid=335161)
-  <small>약업닷컴 · 06:01</small>
-- [젠슨 황 떠난 엔비디아, '실질적 2인자' 크레스가 임시 CEO 맡아](https://www.aitimes.com/news/articleView.html?idxno=217350)
-  <small>AI타임스 · 05:56</small>
+- [마키나락스, 3분기 만에 지난해 연매출 실현\.\.\.영업손실은 지속](https://www.aitimes.com/news/articleView.html?idxno=217359)
+  <small>AI타임스 · 11:49</small>
+- [\[세상을 바꿀 질문들\] ④피지컬AI\: 스스로 배우는 로봇의 현실은](https://www.dongascience.com/ko/news/80862)
+  <small>DongA Science · 11:45</small>
+- [중국, 젠슨 황 사태에 반발…"미국 기술 제재 구실 안 돼"](https://www.aitimes.com/news/articleView.html?idxno=217358)
+  <small>AI타임스 · 11:40</small>
+- [한일경제연대, AI·반도체 공동개발부터 경제공동체까지…2045년 목표 3단계 로드맵 제시](https://www.aitimes.kr/news/articleView.html?idxno=42725)
+  <small>인공지능신문 · 11:36</small>
+- ["기후 예측 AI 학습 시뮬레이션 최대 8회에서 1회로 끝낸다"…MIT, 새로운 배출 시나리오도 예측](https://www.aitimes.kr/news/articleView.html?idxno=42724)
+  <small>인공지능신문 · 11:29</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 13일(금)에 나온 기사 5건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-13.md)
+2026년 11월 13일(금)에 나온 기사 17건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-13.md)
 
 ::: v-pre
 
-- [NVIDIA replaces CEO amid China AI and robotics concerns](https://www.therobotreport.com/nvidia-replaces-ceo-amid-china-ai-and-robotics-concerns/)
-  <small>The Robot Report · 01:33</small>
-- [中 레노버, 오티스와 '엘리베이터 설치 로봇' 발표](https://www.irobotnews.com/news/articleView.html?idxno=49564)
-  <small>로봇신문 · 01:00</small>
-- [中 '사과 수확 로봇' 기술 표준 발표](https://www.irobotnews.com/news/articleView.html?idxno=49562)
-  <small>로봇신문 · 00:51</small>
-- [KISTEP "한국 휴머노이드 경쟁력, 하드웨어 넘어 AI·데이터 생태계로 확장해야"](https://www.irobotnews.com/news/articleView.html?idxno=49560)
-  <small>로봇신문 · 00:14</small>
-- [한국, 제조업 로봇밀도 세계 1위…근로자 1만명당 1066대](https://www.irobotnews.com/news/articleView.html?idxno=49559)
-  <small>로봇신문 · 00:02</small>
+- [\[세상을 바꿀 질문들\] ④피지컬AI\: 스스로 배우는 로봇의 현실은](https://www.dongascience.com/ko/news/80862)
+  <small>DongA Science · 11:45</small>
+- [현대차, 자율주행·로봇 기술 배울 학교 찾는다](https://www.m-i.kr/news/articleView.html?idxno=2018168)
+  <small>매일일보 · 10:15</small>
+- [에브리봇, ‘키즈케어 로봇’ 사업화 속도…실버케어와 ‘케어로봇’ 양축 구축](https://stock.mk.co.kr/news/view/1198163)
+  <small>매일경제 마켓 · 10:12</small>
+- [환경보전원, 양평 수변녹지에 자율주행 해설 로봇…주 24회 운영](https://www.energydaily.co.kr/news/articleView.html?idxno=205059)
+  <small>에너지데일리 · 10:12</small>
+- [에브리봇, '키즈케어 로봇' 사업 본격화](https://www.newspim.com/news/view/20261113000279)
+  <small>뉴스핌 · 09:53</small>
 
 :::
