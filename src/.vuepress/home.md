@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 13일(금)에 나온 기사 116건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-13.md)
+2026년 11월 13일(금)에 나온 기사 168건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-13.md)
 
 ::: v-pre
 
-- [마키나락스, 3분기 만에 지난해 연매출 실현\.\.\.영업손실은 지속](https://www.aitimes.com/news/articleView.html?idxno=217359)
-  <small>AI타임스 · 11:49</small>
-- [\[세상을 바꿀 질문들\] ④피지컬AI\: 스스로 배우는 로봇의 현실은](https://www.dongascience.com/ko/news/80862)
-  <small>DongA Science · 11:45</small>
-- [중국, 젠슨 황 사태에 반발…"미국 기술 제재 구실 안 돼"](https://www.aitimes.com/news/articleView.html?idxno=217358)
-  <small>AI타임스 · 11:40</small>
-- [한일경제연대, AI·반도체 공동개발부터 경제공동체까지…2045년 목표 3단계 로드맵 제시](https://www.aitimes.kr/news/articleView.html?idxno=42725)
-  <small>인공지능신문 · 11:36</small>
-- ["기후 예측 AI 학습 시뮬레이션 최대 8회에서 1회로 끝낸다"…MIT, 새로운 배출 시나리오도 예측](https://www.aitimes.kr/news/articleView.html?idxno=42724)
-  <small>인공지능신문 · 11:29</small>
+- [AMD, 양자컴퓨터 오류 수정에 GPU·SW 투입…엔비디아와 경쟁](https://www.aitimes.com/news/articleView.html?idxno=217381)
+  <small>AI타임스 · 16:34</small>
+- [엔비디아판 '콘클라베' 결과가 AI 산업 전반에 변수, 젠슨 황 역할 대체하기 쉽지 않아](https://www.businesspost.co.kr/BP?command=article_view&num=451980)
+  <small>비즈니스포스트 · 16:27</small>
+- [엘리스그룹, 'B300' 기반 AI 데이터센터 베타 서비스 개시](https://www.aitimes.com/news/articleView.html?idxno=217366)
+  <small>AI타임스 · 16:18</small>
+- [골드만삭스 "AI 투자, 2027년 말 연간 1865조원 규모…미국 경제성장 주도"](https://www.aitimes.com/news/articleView.html?idxno=217382)
+  <small>AI타임스 · 16:17</small>
+- [엘리스그룹, 대한민국 인터넷대상 대통령상수상…AI 데이터센터 구축 공로](https://www.aitimes.com/news/articleView.html?idxno=217386)
+  <small>AI타임스 · 15:52</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 13일(금)에 나온 기사 17건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-13.md)
+2026년 11월 13일(금)에 나온 기사 39건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-13.md)
 
 ::: v-pre
 
-- [\[세상을 바꿀 질문들\] ④피지컬AI\: 스스로 배우는 로봇의 현실은](https://www.dongascience.com/ko/news/80862)
-  <small>DongA Science · 11:45</small>
-- [현대차, 자율주행·로봇 기술 배울 학교 찾는다](https://www.m-i.kr/news/articleView.html?idxno=2018168)
-  <small>매일일보 · 10:15</small>
-- [에브리봇, ‘키즈케어 로봇’ 사업화 속도…실버케어와 ‘케어로봇’ 양축 구축](https://stock.mk.co.kr/news/view/1198163)
-  <small>매일경제 마켓 · 10:12</small>
-- [환경보전원, 양평 수변녹지에 자율주행 해설 로봇…주 24회 운영](https://www.energydaily.co.kr/news/articleView.html?idxno=205059)
-  <small>에너지데일리 · 10:12</small>
-- [에브리봇, '키즈케어 로봇' 사업 본격화](https://www.newspim.com/news/view/20261113000279)
-  <small>뉴스핌 · 09:53</small>
+- [ETRI, 사람 특성까지 고려하는 로봇 AI 평가기술 '트리니티' 개발](https://www.hellot.net/news/article.html?no=116291)
+  <small>헬로티 · 16:05</small>
+- [\[르포\] 반도체·가전·로봇이 한 무대에…KOTRA 'K-커넥트 AI' 가보니](https://www.newspim.com/news/view/20261014001195)
+  <small>뉴스핌 · 15:50</small>
+- [주간 로봇 기업 주가 동향(11\/09 \~ 11\/13)](https://www.irobotnews.com/news/articleView.html?idxno=49570)
+  <small>로봇신문 · 15:37</small>
+- [오늘의 로봇 기업 주식 시세(2026-11-13)](https://www.irobotnews.com/news/articleView.html?idxno=49569)
+  <small>로봇신문 · 15:36</small>
+- ["美, 2030년 휴머노이드 로봇 생산 40만대 전망…관세부과 가능성"](https://www.theguru.co.kr/news/article.html?no=109685)
+  <small>더구루 · 14:42</small>
 
 :::
