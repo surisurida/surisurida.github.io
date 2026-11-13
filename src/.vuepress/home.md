@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 13일(금)에 나온 기사 168건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-13.md)
+2026년 11월 14일(토)에 나온 기사 15건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-14.md)
 
 ::: v-pre
 
-- [AMD, 양자컴퓨터 오류 수정에 GPU·SW 투입…엔비디아와 경쟁](https://www.aitimes.com/news/articleView.html?idxno=217381)
-  <small>AI타임스 · 16:34</small>
-- [엔비디아판 '콘클라베' 결과가 AI 산업 전반에 변수, 젠슨 황 역할 대체하기 쉽지 않아](https://www.businesspost.co.kr/BP?command=article_view&num=451980)
-  <small>비즈니스포스트 · 16:27</small>
-- [엘리스그룹, 'B300' 기반 AI 데이터센터 베타 서비스 개시](https://www.aitimes.com/news/articleView.html?idxno=217366)
-  <small>AI타임스 · 16:18</small>
-- [골드만삭스 "AI 투자, 2027년 말 연간 1865조원 규모…미국 경제성장 주도"](https://www.aitimes.com/news/articleView.html?idxno=217382)
-  <small>AI타임스 · 16:17</small>
-- [엘리스그룹, 대한민국 인터넷대상 대통령상수상…AI 데이터센터 구축 공로](https://www.aitimes.com/news/articleView.html?idxno=217386)
-  <small>AI타임스 · 15:52</small>
+- [가톨릭대 김준영 교수팀, 폐기물 가스화 최적 운전조건 AI 도출](https://www.medigatenews.com/news/2503158400)
+  <small>MEDI\:GATE NEWS · 06:33</small>
+- [\[인공지능 줌인\] “노트북에 커피 쏟지 마”…문자 그대로의 명령 넘어서는 로봇 AI 플랫폼 ‘FLEX’ 관심 집중](https://www.wikileaks-kr.org/news/articleView.html?idxno=194397)
+  <small>위키리크스한국 · 06:02</small>
+- [ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you](https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet)
+  <small>The Verge · 05:45</small>
+- [“인공지능 MRI 설치하니 투자금 15개월 만에 회수” \[건강한겨레\]](https://www.hani.co.kr/arti/hanihealth/medical/1287299.html)
+  <small>한겨레 · 05:00</small>
+- [AI agent startup LangChain hits \$3B valuation](https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/)
+  <small>TechCrunch · 04:37</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 13일(금)에 나온 기사 39건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-13.md)
+2026년 11월 14일(토)에 나온 기사 5건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-14.md)
 
 ::: v-pre
 
-- [ETRI, 사람 특성까지 고려하는 로봇 AI 평가기술 '트리니티' 개발](https://www.hellot.net/news/article.html?no=116291)
-  <small>헬로티 · 16:05</small>
-- [\[르포\] 반도체·가전·로봇이 한 무대에…KOTRA 'K-커넥트 AI' 가보니](https://www.newspim.com/news/view/20261014001195)
-  <small>뉴스핌 · 15:50</small>
-- [주간 로봇 기업 주가 동향(11\/09 \~ 11\/13)](https://www.irobotnews.com/news/articleView.html?idxno=49570)
-  <small>로봇신문 · 15:37</small>
-- [오늘의 로봇 기업 주식 시세(2026-11-13)](https://www.irobotnews.com/news/articleView.html?idxno=49569)
-  <small>로봇신문 · 15:36</small>
-- ["美, 2030년 휴머노이드 로봇 생산 40만대 전망…관세부과 가능성"](https://www.theguru.co.kr/news/article.html?no=109685)
-  <small>더구루 · 14:42</small>
+- [\[로봇 온사이트\] 휴머노이드 시대, 유럽의 자리는](https://theguru.co.kr/news/article.html?no=109738)
+  <small>더구루 · 06:22</small>
+- [Video Friday\: NASA PROMISEs a New Moon Rover](https://spectrum.ieee.org/video-friday-moon-rover-promise)
+  <small>IEEE Spectrum · 02:30</small>
+- [Six AGIBOT G2 Robots Complete 1,730 Tasks in 24-Hour Shanghai Convenience Store Trial](https://www.therobotreport.com/six-agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-convenience-store-trial/)
+  <small>The Robot Report · 01:32</small>
+- [성능은 기본, 공정 연계까지 점검…GS건설, 건설로봇 현장 투입 시동](https://www.joongang.co.kr/article/25478540)
+  <small>중앙일보 · 01:13</small>
+- [농구공 집어 골대에 넣는 로봇](https://www.chosun.com/economy/industry-company/2026/11/14/RX62GKXRZFFD7IXTURSHHCF64A/)
+  <small>조선일보 · 00:34</small>
 
 :::
