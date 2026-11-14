@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 14일(토)에 나온 기사 15건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-14.md)
+2026년 11월 14일(토)에 나온 기사 47건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-14.md)
 
 ::: v-pre
 
-- [가톨릭대 김준영 교수팀, 폐기물 가스화 최적 운전조건 AI 도출](https://www.medigatenews.com/news/2503158400)
-  <small>MEDI\:GATE NEWS · 06:33</small>
-- [\[인공지능 줌인\] “노트북에 커피 쏟지 마”…문자 그대로의 명령 넘어서는 로봇 AI 플랫폼 ‘FLEX’ 관심 집중](https://www.wikileaks-kr.org/news/articleView.html?idxno=194397)
-  <small>위키리크스한국 · 06:02</small>
-- [ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you](https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet)
-  <small>The Verge · 05:45</small>
-- [“인공지능 MRI 설치하니 투자금 15개월 만에 회수” \[건강한겨레\]](https://www.hani.co.kr/arti/hanihealth/medical/1287299.html)
-  <small>한겨레 · 05:00</small>
-- [AI agent startup LangChain hits \$3B valuation](https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/)
-  <small>TechCrunch · 04:37</small>
+- [딥시크·문샷 등 중국 4개사, 수출 통제 '블랙웰' 사용 흔적 발견](https://www.aitimes.com/news/articleView.html?idxno=217397)
+  <small>AI타임스 · 11:18</small>
+- [앤트로픽 IPO, 중국·홍콩 투자자 공모주 배정 제한…미국 안보 규제 영향](https://www.aitimes.com/news/articleView.html?idxno=217402)
+  <small>AI타임스 · 10:53</small>
+- [오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시](https://www.aitimes.com/news/articleView.html?idxno=217400)
+  <small>AI타임스 · 10:41</small>
+- [\[AI 이슈트렌드\] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보 유출 등 화제](https://www.aitimes.com/news/articleView.html?idxno=217404)
+  <small>AI타임스 · 10:27</small>
+- [스페이스X, 영상 생성 AI '그록 이매진' 개발팀 대부분 해고\.\.\.AI 코딩에 집중](https://www.aitimes.com/news/articleView.html?idxno=217399)
+  <small>AI타임스 · 10:15</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 14일(토)에 나온 기사 5건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-14.md)
+2026년 11월 14일(토)에 나온 기사 10건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-14.md)
 
 ::: v-pre
 
+- [로봇 팔던 中 기업들이 벤처투자에 수천억원 쏟아붓는 이유 \[차이나 워치\]](https://www.hankyung.com/article/202611134552i)
+  <small>한국경제 · 09:43</small>
+- [불길 속으로 로봇이 뛰어든다…](http://www.seogwipo.tv/news/articleView.html?idxno=15114)
+  <small>서귀포방송 · 08:53</small>
+- [\[사이언스영상\] 로봇도 롤러스케이트를? 바퀴로 달리는 휴머노이드](https://www.dongascience.com/ko/news/80867)
+  <small>DongA Science · 08:00</small>
+- [배틀그라운드 만들던 크래프톤, 이젠 로봇 두뇌 만든다](https://economist.co.kr/article/view/ecn202611090046)
+  <small>이코노미스트 · 07:02</small>
 - [\[로봇 온사이트\] 휴머노이드 시대, 유럽의 자리는](https://theguru.co.kr/news/article.html?no=109738)
   <small>더구루 · 06:22</small>
-- [Video Friday\: NASA PROMISEs a New Moon Rover](https://spectrum.ieee.org/video-friday-moon-rover-promise)
-  <small>IEEE Spectrum · 02:30</small>
-- [Six AGIBOT G2 Robots Complete 1,730 Tasks in 24-Hour Shanghai Convenience Store Trial](https://www.therobotreport.com/six-agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-convenience-store-trial/)
-  <small>The Robot Report · 01:32</small>
-- [성능은 기본, 공정 연계까지 점검…GS건설, 건설로봇 현장 투입 시동](https://www.joongang.co.kr/article/25478540)
-  <small>중앙일보 · 01:13</small>
-- [농구공 집어 골대에 넣는 로봇](https://www.chosun.com/economy/industry-company/2026/11/14/RX62GKXRZFFD7IXTURSHHCF64A/)
-  <small>조선일보 · 00:34</small>
 
 :::
