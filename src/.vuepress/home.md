@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 14일(토)에 나온 기사 47건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-14.md)
+2026년 11월 14일(토)에 나온 기사 59건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-14.md)
 
 ::: v-pre
 
-- [딥시크·문샷 등 중국 4개사, 수출 통제 '블랙웰' 사용 흔적 발견](https://www.aitimes.com/news/articleView.html?idxno=217397)
-  <small>AI타임스 · 11:18</small>
-- [앤트로픽 IPO, 중국·홍콩 투자자 공모주 배정 제한…미국 안보 규제 영향](https://www.aitimes.com/news/articleView.html?idxno=217402)
-  <small>AI타임스 · 10:53</small>
-- [오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시](https://www.aitimes.com/news/articleView.html?idxno=217400)
-  <small>AI타임스 · 10:41</small>
-- [\[AI 이슈트렌드\] 젠슨 황 퇴진 쇼크 속 트럼프 행보·앤트로픽 개인정보 유출 등 화제](https://www.aitimes.com/news/articleView.html?idxno=217404)
-  <small>AI타임스 · 10:27</small>
-- [스페이스X, 영상 생성 AI '그록 이매진' 개발팀 대부분 해고\.\.\.AI 코딩에 집중](https://www.aitimes.com/news/articleView.html?idxno=217399)
-  <small>AI타임스 · 10:15</small>
+- [국가AI전략위, 엔비디아 최고경영진 변화에 따른 긴급 점검회의 개최](https://news.einfomax.co.kr/news/articleView.html?idxno=4444780)
+  <small>연합인포맥스 · 14:14</small>
+- [세무사 시험 수석 합격자 "AI 안경으로 문제 다 맞힐 수 있다면 공부 왜 하겠나"](https://www.chosun.com/national/labor/2026/11/14/F4LAS3IYH5AAVHWEV6HHKOOONY/)
+  <small>조선일보 · 14:08</small>
+- [마이크로소프트는 인공지능 학습용 게임용 GPU 구매 비용을 지불할 의향이 있다\.](https://www.vietnam.vn/ko/microsoft-muon-tra-tien-de-gpu-gaming-huan-luyen-ai)
+  <small>Vietnam\.vn · 13:51</small>
+- [日, AI로 복제한 유명인 목소리·사진 무단 상업이용 규제 추진](https://www.yna.co.kr/view/AKR20261114030800073)
+  <small>연합뉴스 · 13:08</small>
+- [인공지능 기반 단편 영화에 감정과 인식을 조종당하지 마세요\.](https://www.vietnam.vn/ko/ung-de-phim-ngan-ai-dan-dat-cam-xuc-va-nhan-thuc)
+  <small>Vietnam\.vn · 12:40</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 14일(토)에 나온 기사 10건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-14.md)
+2026년 11월 14일(토)에 나온 기사 14건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-14.md)
 
 ::: v-pre
 
+- [\[지구촌톡톡\] ’남극 마라톤’ 도전한 로봇…360m 굴뚝서 발사](https://www.yonhapnewstv.co.kr/news/MYH20261114160650Uic)
+  <small>연합뉴스TV · 16:06</small>
+- [\[AI 클로즈업\] 모델부터 로봇까지… 엔비디아가 투자 예고한 韓 AI 3사](https://www.ddaily.co.kr/page/view/2026111400592111196)
+  <small>디지털데일리 · 14:00</small>
+- [“10년 뒤 누구나 로봇 하나씩”…지드래곤 소속사 대표가 꿈꾸는 미래](https://www.donga.com/news/Economy/article/all/20261113/135018748/2)
+  <small>동아일보 · 11:00</small>
+- [하나증권 “자동차업계, 환율 부담 속 로봇·자율주행 성장성 주목”](https://kidd.co.kr/news/248145)
+  <small>산업일보 · 10:52</small>
 - [로봇 팔던 中 기업들이 벤처투자에 수천억원 쏟아붓는 이유 \[차이나 워치\]](https://www.hankyung.com/article/202611134552i)
   <small>한국경제 · 09:43</small>
-- [불길 속으로 로봇이 뛰어든다…](http://www.seogwipo.tv/news/articleView.html?idxno=15114)
-  <small>서귀포방송 · 08:53</small>
-- [\[사이언스영상\] 로봇도 롤러스케이트를? 바퀴로 달리는 휴머노이드](https://www.dongascience.com/ko/news/80867)
-  <small>DongA Science · 08:00</small>
-- [배틀그라운드 만들던 크래프톤, 이젠 로봇 두뇌 만든다](https://economist.co.kr/article/view/ecn202611090046)
-  <small>이코노미스트 · 07:02</small>
-- [\[로봇 온사이트\] 휴머노이드 시대, 유럽의 자리는](https://theguru.co.kr/news/article.html?no=109738)
-  <small>더구루 · 06:22</small>
 
 :::
