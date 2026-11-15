@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 14일(토)에 나온 기사 59건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-14.md)
+2026년 11월 15일(일)에 나온 기사 98건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-15.md)
 
 ::: v-pre
 
-- [국가AI전략위, 엔비디아 최고경영진 변화에 따른 긴급 점검회의 개최](https://news.einfomax.co.kr/news/articleView.html?idxno=4444780)
-  <small>연합인포맥스 · 14:14</small>
-- [세무사 시험 수석 합격자 "AI 안경으로 문제 다 맞힐 수 있다면 공부 왜 하겠나"](https://www.chosun.com/national/labor/2026/11/14/F4LAS3IYH5AAVHWEV6HHKOOONY/)
-  <small>조선일보 · 14:08</small>
-- [마이크로소프트는 인공지능 학습용 게임용 GPU 구매 비용을 지불할 의향이 있다\.](https://www.vietnam.vn/ko/microsoft-muon-tra-tien-de-gpu-gaming-huan-luyen-ai)
-  <small>Vietnam\.vn · 13:51</small>
-- [日, AI로 복제한 유명인 목소리·사진 무단 상업이용 규제 추진](https://www.yna.co.kr/view/AKR20261114030800073)
-  <small>연합뉴스 · 13:08</small>
-- [인공지능 기반 단편 영화에 감정과 인식을 조종당하지 마세요\.](https://www.vietnam.vn/ko/ung-de-phim-ngan-ai-dan-dat-cam-xuc-va-nhan-thuc)
-  <small>Vietnam\.vn · 12:40</small>
+- [재경부 "합격 보류 논의"…정부, AI 부정행위 뒷북 대응](https://www.yonhapnewstv.co.kr/news/MYH20261115201904rJI)
+  <small>연합뉴스TV · 20:19</small>
+- [안 들린 말 있다면…AI가 문맥 보고 찾아낸다](https://www.khan.co.kr/article/202611152014005)
+  <small>경향신문 · 20:14</small>
+- [AI 부정행위 뿌리 뽑는다…정부, 국가자격시험 전면 조사 착수](https://www.electimes.com/news/articleView.html?idxno=374777)
+  <small>전기신문 · 20:11</small>
+- [가스기사 시험서 'AI 안경' 적발‥이젠 '초소형 기기'까지?](https://imnews.imbc.com/replay/2026/nwdesk/article/6865806_37004.html)
+  <small>MBC 뉴스 · 19:59</small>
+- ['AI 부정행위' 세무사 수석 결국 자수‥감독관 코앞에서 뚫렸다](https://imnews.imbc.com/replay/2026/nwdesk/article/6865805_37004.html)
+  <small>MBC 뉴스 · 19:57</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 14일(토)에 나온 기사 14건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-14.md)
+2026년 11월 15일(일)에 나온 기사 22건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-15.md)
 
 ::: v-pre
 
-- [\[지구촌톡톡\] ’남극 마라톤’ 도전한 로봇…360m 굴뚝서 발사](https://www.yonhapnewstv.co.kr/news/MYH20261114160650Uic)
-  <small>연합뉴스TV · 16:06</small>
-- [\[AI 클로즈업\] 모델부터 로봇까지… 엔비디아가 투자 예고한 韓 AI 3사](https://www.ddaily.co.kr/page/view/2026111400592111196)
-  <small>디지털데일리 · 14:00</small>
-- [“10년 뒤 누구나 로봇 하나씩”…지드래곤 소속사 대표가 꿈꾸는 미래](https://www.donga.com/news/Economy/article/all/20261113/135018748/2)
-  <small>동아일보 · 11:00</small>
-- [하나증권 “자동차업계, 환율 부담 속 로봇·자율주행 성장성 주목”](https://kidd.co.kr/news/248145)
-  <small>산업일보 · 10:52</small>
-- [로봇 팔던 中 기업들이 벤처투자에 수천억원 쏟아붓는 이유 \[차이나 워치\]](https://www.hankyung.com/article/202611134552i)
-  <small>한국경제 · 09:43</small>
+- [中 유비테크 '사람닮은 로봇', 차 딜러사에 400대 공급](https://www.irobotnews.com/news/articleView.html?idxno=49593)
+  <small>로봇신문 · 19:52</small>
+- [美 다이내믹 크리처스, 식스스 월스튜디오와 캐릭터 로봇 ‘휴고’ 제작](https://www.irobotnews.com/news/articleView.html?idxno=49591)
+  <small>로봇신문 · 19:30</small>
+- [獨 BMW, 차세대 전기차 생산용 ABB로봇 1700여대 주문](https://www.irobotnews.com/news/articleView.html?idxno=49590)
+  <small>로봇신문 · 19:20</small>
+- [美 액슨, 드론업체 스카이디오에 1\.6조원 투자](https://www.irobotnews.com/news/articleView.html?idxno=49588)
+  <small>로봇신문 · 19:16</small>
+- [中 리버AI, 인간 경험 기반으로 행동하는 월드 액션 모델 ‘리버-0’ 공개](https://www.irobotnews.com/news/articleView.html?idxno=49587)
+  <small>로봇신문 · 19:09</small>
 
 :::
