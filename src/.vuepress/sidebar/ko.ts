@@ -10,7 +10,6 @@ const robotDates = newsDates("robot");
 
 export const koSidebar = sidebar({
   "/": [
-    "",
     {
       text: "뉴스",
       icon: "newspaper",

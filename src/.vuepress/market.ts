@@ -40,6 +40,41 @@ export const weeklyDates = (): string[] =>
  */
 export const marketPageNames = (): string[] => [...marketDates(), ...weeklyDates()].sort().reverse();
 
+export type MarketPageKind = "daily" | "weekly";
+
+/**
+ * 마지막으로 만든 증시 페이지를 고릅니다.
+ * 이름이 "YYYY-MM-DD" 계열이라, 같은 날짜에서는 주간(뒤에 생성)이 앞에 옵니다.
+ */
+export const latestMarketPage = (): { name: string; kind: MarketPageKind } | undefined => {
+  const [name] = marketPageNames();
+  if (!name) return undefined;
+  return { name, kind: name.endsWith(" 주간") ? "weekly" : "daily" };
+};
+
+/**
+ * 주간 페이지 본문에서 메인 페이지 요약을 만듭니다.
+ * ③ 주간 테마 요약의 첫 문장을 한 줄 요약으로 쓰고, 없으면 설명 문구로 대신합니다.
+ */
+export const weeklySummary = (
+  name: string,
+  text = readFileSync(new URL(`${name}.md`, MARKET_DIR), "utf8"),
+) => {
+  const description = /^description:\s*"([^"]+)"/mu.exec(text)?.[1];
+  const section = /## ③ 주간 테마 요약\s*\n([\s\S]*?)(?:\n## |\n<p class="market-note">|$)/u.exec(text)?.[1] ?? "";
+  const lead = /^- (.+)$/mu.exec(section)?.[1]?.trim() ?? "";
+  const plain = lead.replace(/\[([^\]]+)\]\([^)]+\)/gu, "$1");
+  const firstSentence = plain.split(". ")[0].trim();
+  const changes = firstSentence ? (firstSentence.endsWith(".") ? firstSentence : `${firstSentence}.`) : "";
+
+  return {
+    link: `/news/market/${name}.html`,
+    title: `${name} 증시 전망`,
+    briefing: description ?? `${name} 주간 증시 일정과 테마입니다.`,
+    changes: changes || description || `${name} 주간 증시 일정과 테마입니다.`,
+  };
+};
+
 /**
  * 메인 페이지의 증시 전망 구획에 넣을 문구를 날짜별 페이지 본문에서 읽어 만듭니다.
  * 페이지 형식이 어긋나면 잘못된 요약이 나가지 않도록 오류를 냅니다.
