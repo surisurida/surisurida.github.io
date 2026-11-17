@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 17일(화)에 나온 기사 115건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-17.md)
+2026년 11월 17일(화)에 나온 기사 183건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-17.md)
 
 ::: v-pre
 
-- [AI가 배우를 대체할 수 있을까…프롬, 배우·감독·제작자 참여 ‘AI 명작 감상회’ 개최](https://www.aitimes.kr/news/articleView.html?idxno=42762)
-  <small>인공지능신문 · 11:34</small>
-- [\[AI 트렌드\] 금천구, 누리집 ‘인공지능(AI) 다국어 자동 번역 서비스’ 개시 外](https://news.google.com/rss/articles/CBMibEFVX3lxTE8xMUdQdnV4ZVFxOC1pcDZZcnQ1cW9xeUZibzUxUTFOX0JMVkUzajROMjBLaHljYkJFRHBDT2NwMVFIWGJzenc2b2QtNkNpRkxZdmRWQ0NKR2FWdkdrN1pNMnZfNHVubnFaVXZ4Zg?oc=5)
-  <small>베이비뉴스 · 11:33</small>
-- [\[AI 이슈\] 한국어 말투·억양까지 구현하는 ‘제미나이’…구글, 지역별 AI 음성 66종 추가](https://www.aitimes.kr/news/articleView.html?idxno=42761)
-  <small>인공지능신문 · 11:27</small>
-- [전 남친들 외모 조합해 만든 'AI 남편', 완벽할까?](https://news.google.com/rss/articles/CBMid0FVX3lxTE9KZ3ZnVG04Q2dnY0V6UDlXSWlBVENKcVJSQ00yUFhXNnJYV0JBZFoydzJsTnY5cE5xZmtZZUtBd0Jvbnk3bkEwR2lOM2FaOEtoQ3FkQUlvYWZzXzlaX3NEdURHd3dDNkJrMnI0eG03b0FjdE5zUEZr?oc=5)
-  <small>OhmyNews · 11:22</small>
-- [양평군, ‘스마트 양평톡톡’ 생성형 인공지능 민원챗봇 시연회 개최](https://news.google.com/rss/articles/CBMibkFVX3lxTE1KTi1aVGEtRDI5Tjh2N1ExWDNZUXpTNVp4a2RqX1VBNFM4V1lwOFNlRFNwajR1OS10VGNpV0tDdTJIVXFZZUN6WnpiemtCWjc0czNlT1lwdTY3SEdGSjVnaHZ2U2JjVXdmSWF0S1JB?oc=5)
-  <small>서프라이즈뉴스 · 11:20</small>
+- [오픈AI, 'AI 내부 분석' 굿파이어 50억달러 인수 검토…무산 후 안전성 평가 협력](https://www.aitimes.com/news/articleView.html?idxno=217488)
+  <small>AI타임스 · 16:41</small>
+- [중국, 전파 차단하고 AI 답변 막아…교실엔 360도 카메라 설치](https://news.google.com/rss/articles/CBMibEFVX3lxTE1KMXlqaGZnR1h5dEt4WndYRXFaYmhBWTExM1FPUWZOZmpqZmhiMU9ZU2lyS0xvWXRUTzBIdUo5YWNLU3VDYzh0enpVX1F3V3NPTTJaUVp1dG51Ni1EMGZCLUZGQnI5OTFfM2w4dg?oc=5)
+  <small>한겨레 · 16:40</small>
+- [AI 커닝에 제조사 책임론 커질까…AI 안경 안전장치 강화해도 우회 수법 진화 ‘딜레마’](https://news.google.com/rss/articles/CBMiWkFVX3lxTE5EVFJMNE54TWRvSHNfWU4wSklLQ1NQMlRFb21qaEFWODVhRFd2X0RiM2p0VXlYSU9tUHA1S212dG44R2F1cndjb3c2UnZuTlZyNXQtLVR1a0hqQdIBX0FVX3lxTFB3TU9PNUpadkx3eDU1SlBtTWRIeEtTbmdxSENSOFVuelhJMG44dENWcG85ZjJ6MmtHMm1zNWpjWEpuZkNiYUY4YkVadkQ5VVQ3bjBwcEllTVJCZ1B1dFNV?oc=5)
+  <small>경향신문 · 16:38</small>
+- [경찰, ‘AI 부정행위’ 세무사시험 수석 조사…‘계산기 활용’ 등 범행 수법 파악에 주력](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Db0wxeW5lc2VTNmVKalpHZUhOYVE5X2FyLTBFdjJvVGxZc2RWbzJNY0JGSDlmaDZrSkpzQUZGSmJ1bjN5eTM5bExQQWJhSFc0MGZSM3p6Q0FxQdIBX0FVX3lxTE4xbkdmMUpLWmlFQXprMEFLcWtGcXk1MjdtN1Nob3hjRVZqMGJ0VUpkMFFwS0dRYnhzem5lQmVIcXlJcGhyRVM2SXZFbU9vYXV5QU11QlhxV0RIMUU3Y2Z3?oc=5)
+  <small>경향신문 · 16:36</small>
+- [안양시, 사내 강사 활용한 인공지능 실무 특강 진행](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5OWnFmX19scG9ERzdqOTVxX0FGYXRQdGVud2xKRVFRcmR1dW5taFdxNWN4MmRaRmFFZlEzeWtkZGlyTHpoak91SVMwM05paUNNc2o1aHU2Sll5VHNBeGViMEw5Wm5xamMy?oc=5)
+  <small>수도권지역뉴스 · 16:35</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 17일(화)에 나온 기사 9건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-17.md)
+2026년 11월 17일(화)에 나온 기사 19건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-17.md)
 
 ::: v-pre
 
-- [화웨이, 로봇용 AI 세계모델 공개…中 기업 80% 이용 주장](https://www.yonhapnewstv.co.kr/news/AKR20261117112253TX2)
-  <small>연합뉴스TV · 11:22</small>
-- ["AI 로봇이 뇌혈관 시술하는 시대 오나"…레머디 로보틱스, 6,200만 달러 투자 유치](https://www.aitimes.kr/news/articleView.html?idxno=42759)
-  <small>인공지능신문 · 10:26</small>
-- [클로봇, 청소로봇 라인업 4배 확대…적용 공간 다변화로 신규 사업장 공략](https://www.irobotnews.com/news/articleView.html?idxno=49630)
-  <small>로봇신문 · 10:13</small>
-- [언더워터솔루션, 중기부 팁스 선정…수중로봇·AI 기술개발 본격화](https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZQWJWeFlVSXE4cC1pOUtKVTNVTnk1MkV6ZGl3TXNWVklIdkxpYjE0aFl2X1QxSFVkcWhROFltMmZKeWpUSHVFQndkZGlXbWZwd2U0Sk9SNjlsdTZ0M1JRZ0FWLU92MHAwbUhn?oc=5)
-  <small>해사신문 · 09:54</small>
-- [The hidden reason most robots fail on the factory floor](https://www.therobotreport.com/the-hidden-reason-most-robots-fail-on-the-factory-floor/)
-  <small>The Robot Report · 08:49</small>
+- [컨슈머인사이트·달파, AI 기반 소비자 행동 예측 모델 개발 MOU](https://www.irobotnews.com/news/articleView.html?idxno=49641)
+  <small>로봇신문 · 16:06</small>
+- [일본 최대급 로봇 전문전시회 'RoboNext 2026', 12월 2일 오사카서 개막](https://www.irobotnews.com/news/articleView.html?idxno=49639)
+  <small>로봇신문 · 16:03</small>
+- [위로보틱스–오토복, 북미 지역 웨어러블 로봇 접근성 확대 위해 맞손](https://www.irobotnews.com/news/articleView.html?idxno=49640)
+  <small>로봇신문 · 15:52</small>
+- [오늘의 로봇 기업 주식 시세(2026-11-17)](https://www.irobotnews.com/news/articleView.html?idxno=49638)
+  <small>로봇신문 · 15:35</small>
+- [기드온 브라더스, 트레일러 상·하역 자율 지게차 '트레이' 북미 시장 출시](https://www.irobotnews.com/news/articleView.html?idxno=49637)
+  <small>로봇신문 · 12:29</small>
 
 :::
