@@ -2,29 +2,31 @@
 
 ## AI 뉴스
 
-2026년 11월 20일(금)에 나온 기사 24건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-20.md)
+2026년 11월 20일(금)에 나온 기사 30건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-20.md)
 
 ::: v-pre
 
-- [These tech outages are giving Y2K, AI agent style](https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/)
-  <small>TechCrunch · 06:42</small>
-- [EU, 지난달 AI 악용한 사이버공격 받아-피해규모 조사중](https://www.foeconomy.co.kr/news/view.php?no=9975)
-  <small>포커스온경제 · 06:39</small>
-- [미국, 중국 반도체 수출 허가 강화…삼성·TSMC 일부 출하 중단](https://www.aitimes.com/news/articleView.html?idxno=217595)
-  <small>AI타임스 · 06:23</small>
-- [구로구, 대표 누리집에 인공지능 기반 자동 번역 기능 도입](https://www.m-i.kr/news/articleView.html?idxno=2021156)
-  <small>매일일보 · 06:18</small>
-- [경북교육청 인공지능교육관, 찾아가는AI\. SW 체험교실부스 운영](http://m.icbnnews.com/view.php?idx=188665)
-  <small>CBN뉴스 · 06:16</small>
+- [아모데이 "AI 개발 속도 조절…사업·정치적 압력에 굴복 안 해"](https://www.aitimes.com/news/articleView.html?idxno=217596)
+  <small>AI타임스 · 07:00</small>
+- [\[11월19일\] 앤트로픽 IPO 앞두고 오픈AI 창업진이 던진 견제구](https://www.aitimes.com/news/articleView.html?idxno=217561)
+  <small>AI타임스 · 07:00</small>
+- [경기도서관, 30일까지 인공지능(AI) 관련 문화행사 펼쳐](https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=s017&number=72020)
+  <small>경기도뉴스포털 · 07:00</small>
+- [A brief history of Nvidia’s recent stock fluctuations](https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings)
+  <small>The Verge · 06:59</small>
+- [Meta’s new Muse Charm device may cost \$300](https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/)
+  <small>TechCrunch · 06:58</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 20일(금)에 나온 기사 1건 중 최근 1건입니다. [전체 보기](/news/robot/2026-11-20.md)
+2026년 11월 20일(금)에 나온 기사 2건 중 최근 2건입니다. [전체 보기](/news/robot/2026-11-20.md)
 
 ::: v-pre
 
+- [구미시, '로봇산업 생태계 활성화' 본격화\.\.\.산학연 혁신역량 결집](http://www.ifocus.kr/news/articleView.html?idxno=257012)
+  <small>포커스데일리 · 06:45</small>
 - [What industrial drone deployments reveal about real-world autonomy challenges](https://www.therobotreport.com/what-industrial-drone-deployments-reveal-about-real-world-autonomy-challenges/)
   <small>The Robot Report · 02:01</small>
 
