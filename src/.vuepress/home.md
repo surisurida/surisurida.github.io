@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 19일(목)에 나온 기사 110건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-19.md)
+2026년 11월 19일(목)에 나온 기사 188건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-19.md)
 
 ::: v-pre
 
-- [엔비디아, 오픈소스 기반 피지컬 AI 데이터 제작 자동화…학습 데이터 생성 최대 60배 가속](https://www.aitimes.kr/news/articleView.html?idxno=42796)
-  <small>인공지능신문 · 11:47</small>
-- [라온피플, GPU 서버 프리 VLM 기반 영상관제 솔루션 출시](https://www.aitimes.com/news/articleView.html?idxno=217555)
-  <small>AI타임스 · 11:37</small>
-- [한국보건복지인재원, 의료·돌봄 AI 활용 이러닝 2개 과정 개설](https://www.medifonews.com/news/article.html?no=218899)
-  <small>메디포뉴스 · 11:35</small>
-- [평택시 송탄출장소, 공인중개사와 함께 인공지능 활용 부동산 거래 안전 강화](https://www.ggtopnews.com/news/article.html?no=257366)
-  <small>경기탑뉴스 · 11:30</small>
-- [양산인공지능고, 국제로봇콘테스트 수상](https://www.idomin.com/news/articleView.html?idxno=2020026)
-  <small>경남도민일보 · 11:27</small>
+- [오락가락 인공지능(AI) 전망에 지친 투자자들이 선택한 ‘기회의 땅’](https://www.ledesk.co.kr/view.php?uid=16861)
+  <small>르데스크 · 16:37</small>
+- [LG전자, 2027년 임원인사 백승태·이상우 사장 승진 등 44명 승진\.\.\.로보틱스·AI 인재 전진 배치](https://www.aitimes.kr/news/articleView.html?idxno=42804)
+  <small>인공지능신문 · 16:35</small>
+- [오중석 시의원, 서울시 AI 중복사업·행사예산 지적](https://www.ddmissue.com/news_view.jsp?news_cd=15402)
+  <small>동대문 이슈 · 16:29</small>
+- [디 인포메이션 "엔비디아, 알리바바에 해외 GPU 임대 경로 연결"](https://www.aitimes.com/news/articleView.html?idxno=217586)
+  <small>AI타임스 · 16:25</small>
+- [철강 제조현장 인공지능 전환(AX) 속도… 'AI 융합 지원 협의체' 닻 올려](http://www.etnews.com/20261119000383)
+  <small>전자신문 · 16:17</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 19일(목)에 나온 기사 24건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-19.md)
+2026년 11월 19일(목)에 나온 기사 53건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-19.md)
 
 ::: v-pre
 
-- [초등생 한자리 모여 로봇·AI 체험… 동작구, 내달 5일 경진대회](https://www.munhwa.com/article/11632501)
-  <small>문화일보 · 11:40</small>
-- [美 DHL서플라이체인, ‘적응형 로봇+AI조율’ 창고운영 시범 사업](https://news.google.com/rss/articles/CBMibEFVX3lxTE81ai1kTTVtdlFQRF91Znd6MXFWR0VtYW9WM0RSSUhaX01LaTNzQnN1MXFSU1ZMakJlN2REMk1vSjBTTjFiZE1EMWw4V2hMZTdFQVJNd1JJWDVqXy10eTRSNFViZmtuRkgxdEFncQ?oc=5)
-  <small>로봇신문 · 10:37</small>
-- [안산시-HD 현대로보틱스, ‘로봇산업 육성 업무협약’](https://news.google.com/rss/articles/CBMicEFVX3lxTE1tZWlBd1JQbzhGX2FUWUs1NHF4bUQ2Qmw2NmVid1lzdl9BajVwTXdzMlctaFRkZHVsQy1VTll0MExiSUpxWXVyaGdqY21fVzg5SkNqU3pfR0trbVk0V21QcExvUFBpcGMxbTZBY0RydGQ?oc=5)
-  <small>인천일보 · 10:24</small>
-- [안산시, 로봇산업 육성 위해 에이치디(HD)현대로보틱스와 맞손](https://news.google.com/rss/articles/CBMiW0FVX3lxTFA1WVE5TWFnUGZMSkh6UHhMOFhveVVuOWhYc0UwOGMxb1RqUTdfLWxRY3YwNW8zMGZRSUR0djlvVGU3UVNMOHZZbkY4VXFRU2s1ZEI4OU5PTVFlYVE?oc=5)
-  <small>연합뉴스 · 10:21</small>
-- [안산시-HD현대로보틱스, '로봇산업 육성·스마트 제조' 업무협약](https://news.google.com/rss/articles/CBMiYEFVX3lxTE1sdGZtRFdDX0lpMGhXM3F5QlQ2bWlkUkVqSlRwOWNLUzNnTlg3ejJ6SmRYSWF0ZFJndExtZTFJeFM5NHB3QnBOWmxwalVlMGZlZ2ZJMU4zb1JoRUJqS1hhZ9IBYEFVX3lxTE1sdGZtRFdDX0lpMGhXM3F5QlQ2bWlkUkVqSlRwOWNLUzNnTlg3ejJ6SmRYSWF0ZFJndExtZTFJeFM5NHB3QnBOWmxwalVlMGZlZ2ZJMU4zb1JoRUJqS1hhZw?oc=5)
-  <small>연합뉴스 · 09:58</small>
+- [KIMIRo, 국회서 '마이크로로봇 망막질환 정밀 치료기술 포럼' 개최](https://news.google.com/rss/articles/CBMiTkFVX3lxTE9oaW5RQmxJeGNNblV1dUI0UmE1RTJEVG1iazlDY1Fta1h5TWkycU9UYTl1T29hdkVUVWROS3hjRk5rbFVuMGdkMVRZTkJydw?oc=5)
+  <small>전자신문 · 16:44</small>
+- [중국 휴머노이드 로봇, 공장 투입 본격화…작업 속도는 숙련공의 절반 수준](https://news.google.com/rss/articles/CBMibEFVX3lxTE1hUFhIN3lTV1hHLVV1UXBndzhPMDVqbDdmc0MtQkphZ3hleTY1a0ctUThrU2QxcVh6TVZPc2hycEVzZ0t3ZXBtTVdBNEpCbzkydDAwMzhWTWR4VTdMaGpFVkFFRXp5aTAwTkhzNw?oc=5)
+  <small>로봇신문 · 16:37</small>
+- [오늘의 로봇 기업 주식 시세(2026-11-19)](https://www.irobotnews.com/news/articleView.html?idxno=49683)
+  <small>로봇신문 · 16:37</small>
+- [한국섬유기계융합연구원-이수페타시스, 자율제조 및 신소재 업무협약 체결](https://www.irobotnews.com/news/articleView.html?idxno=49685)
+  <small>로봇신문 · 16:00</small>
+- ["삼성전자, CES 2027서 휴머노이드 로봇 2종 공개"…로봇 손 기술 주목](https://www.irobotnews.com/news/articleView.html?idxno=49687)
+  <small>로봇신문 · 15:57</small>
 
 :::
