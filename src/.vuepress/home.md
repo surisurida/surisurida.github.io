@@ -33,7 +33,7 @@
   <small>아이뉴스24 · 09:00</small>
 - ['실패만 골라 배운다'…엑스와이지, 로봇 상용화 비용 낮출 길 찾아](https://www.dhilbo.co.kr/news/articleView.html?idxno=2442)
   <small>동행일보 · 08:37</small>
-- [\[사이언스 영상\] 살아서 장까지 가는 미래 내시경](https://news.google.com/rss/articles/CBMiVEFVX3lxTFAzaENpekp2bU1LdXlWcTA0MjhCNmFhODZDNmU5c3FpaUN2N0ZfaGdISlZYM3A3U1M1WTcxOWJCQzAtRDM0YWptSWF2SEZIVXpHdEoxVg?oc=5)
+- [\[사이언스 영상\] 살아서 장까지 가는 미래 내시경](https://www.dongascience.com/ko/news/80988)
   <small>DongA Science · 08:00</small>
 
 :::
