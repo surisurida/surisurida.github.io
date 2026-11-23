@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 23일(월)에 나온 기사 16건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-23.md)
+2026년 11월 23일(월)에 나온 기사 98건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-23.md)
 
 ::: v-pre
 
-- [OpenAI’s chief scientist has thoughts on how to limit AI development](https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/)
-  <small>TechCrunch · 06:14</small>
-- [“혁신과 상생을 하나로”… 금천구, 인공지능 경진대회와 상생기업 시상](https://www.surprisenews.kr/news/articleView.html?idxno=729280)
-  <small>서프라이즈뉴스 · 06:13</small>
-- [中 지능형 AI 컴퓨팅 전년 대비 146% 급증… 2030년 1,000기 규모 구축](https://www.g-enews.com/article/Global-Biz/2026/11/2026112221254895000c8c1c064d_1)
-  <small>글로벌이코노믹 · 06:05</small>
-- [\[인공지능 줌인\] 아시아에 파고든 중국 AI ‘의존’으로까지 굳어질까](https://www.wikileaks-kr.org/news/articleView.html?idxno=194794)
-  <small>위키리크스한국 · 06:02</small>
-- [\[분석\] "인공은 가짜 같다"…트럼프, AI 대신 '슈퍼지능(SI)' 밀어붙이는 속내](https://www.outsourcing.co.kr/news/articleView.html?idxno=204399)
-  <small>아웃소싱타임스 · 06:00</small>
+- [인공지능(AI)·디지털교육 축제로 미래교육 성과 공유 \> 뉴스](http://dgn.kr/bbs/board.php?bo_table=news&wr_id=162277&me_id=1)
+  <small>대구경북일보 · 11:45</small>
+- [\[조간브리핑\] AI 대격변, 전 세계가 맞닥뜨린 '빛과 그림자'](https://www.hellodd.com/news/articleView.html?idxno=113966)
+  <small>헬로디디 · 11:40</small>
+- [코스피 5%대 급락해 4600선 위협…코스닥 연저점 경신](https://news.bizwatch.co.kr/article/market/2026/11/23/0013)
+  <small>비즈워치 · 11:39</small>
+- [동대문공단, 서울시립대 인공지능학과와 AI 교육협력 위해 맞손](https://www.hg-times.com/news/articleView.html?idxno=307250)
+  <small>한강타임즈 · 11:38</small>
+- [LG전자, 싱가포르에 AI홈 체험공간 개설…동남아 7억 시장 공략 확대](https://www.aitimes.kr/news/articleView.html?idxno=42848)
+  <small>인공지능신문 · 11:36</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 23일(월)에 나온 기사 10건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-23.md)
+2026년 11월 23일(월)에 나온 기사 23건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-23.md)
 
 ::: v-pre
 
-- [손에 칼 차고 날아차기\.\.\.美 실밸, 로봇을 링 위에 올렸다](https://www.chosun.com/economy/tech_it/2026/11/23/S7ECUZCJTFEA7MTMW3PZL5SMWE/)
-  <small>조선일보 · 06:03</small>
-- [스스로 길 찾고 균형까지…산길 달리는 'AI 자전거 로봇'](https://www.etnews.com/20261120000267)
-  <small>전자신문 · 06:00</small>
-- [\[인터뷰\] 김송현 시에라베이스 대표 “사람이 오르던 굴뚝, 이제 드론이 먼저 오른다”](https://www.irobotnews.com/news/articleView.html?idxno=49700)
-  <small>로봇신문 · 02:24</small>
-- [\[Books\] 더 피지컬라이제이션(The Physicalization)](https://www.irobotnews.com/news/articleView.html?idxno=49730)
-  <small>로봇신문 · 02:17</small>
-- [금주의 로봇 캘린더(2026\. 11\. 23\~ 11\. 29)](https://www.irobotnews.com/news/articleView.html?idxno=49729)
-  <small>로봇신문 · 01:48</small>
+- [한림대성심병원, 병원 맞춤형 ‘휴머노이드 로봇’ 초기 모델 현장 테스트](https://www.kgnews.co.kr/news/article.html?no=920713)
+  <small>경기신문 · 10:48</small>
+- [\[중국 특징주\] 앤트그룹, 中 로봇 업체 심플렉시티에 1억달러 투자](https://www.newspim.com/news/view/20261123000469)
+  <small>뉴스핌 · 10:43</small>
+- [한국AI·로봇산업협회, 회원사 500개 돌파…AI·로봇 생태계 확대](https://www.etnews.com/20261123000167)
+  <small>전자신문 · 10:23</small>
+- [한국AIㆍ로봇산업협회, 회원사 500개 사 돌파](https://www.irobotnews.com/news/articleView.html?idxno=49733)
+  <small>로봇신문 · 10:05</small>
+- [\[특징주\] 휴림로봇, 삼성전기 로봇 공급 본계약 체결에 23%↑](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBOUWxYTUtFMU9Fd0dxeTE4N19nVEhYYnBTcGZBQ2NTTVF4cFhMcERxOVFZX1RFSzkyUnhWUnFnMktjLVZENmFobmZQT205cHg0dHpaLXYyVkJ4eXE1?oc=5)
+  <small>뉴스핌 · 09:57</small>
 
 :::
