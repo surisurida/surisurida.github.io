@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 24일(화)에 나온 기사 117건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-24.md)
+2026년 11월 24일(화)에 나온 기사 203건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-24.md)
 
 ::: v-pre
 
-- [인공지능과 노동자 보호의 필요성\.](https://www.vietnam.vn/ko/ai-va-yeu-cau-bao-ve-nguoi-lao-dong)
-  <small>Vietnam\.vn · 11:44</small>
-- ['대마불사' 젠슨 황 복귀에 베팅한 美정부…AI 성장 페달 재가동](https://www.investchosun.com/site/data/html_dir/2026/11/24/2026112480077.html)
-  <small>인베스트조선 · 11:39</small>
-- [서해구 공무원, ‘인공지능(AI) 챔피언 블루’ 인증 취득](https://www.jeonmae.co.kr/news/articleView.html?idxno=1315259)
-  <small>전국매일신문 · 11:38</small>
-- [안양시, 인공지능 정책 추진 종합계획 수립 용역 착수](https://www.kihoilbo.co.kr/news/articleView.html?idxno=3041907)
-  <small>기호일보 · 11:33</small>
-- [삼성전자, 2027 임원인사…반도체 인재 중용 ‘성과주의’ 재확인](https://www.aitimes.com/news/articleView.html?idxno=217717)
-  <small>AI타임스 · 11:26</small>
+- [미국도 중국도 제쳤다…"서울이 세계 2위" 놀라운 결과](https://www.hankyung.com/article/202611247496g)
+  <small>한국경제 · 16:45</small>
+- [안양시, AI 기본·종합계획 수립 착수… 2027\~2029년 3개년 청사진 그린다](https://www.kyeonggi.com/article/20261124580365)
+  <small>경기일보 · 16:43</small>
+- [\[포토\] 인공지능 전환, 리스크와 규제 토의](https://www.mk.co.kr/news/it/12217238)
+  <small>매일경제 · 16:38</small>
+- ["AI 시대, 스스로 질문하는 힘 길러야"…부산 미래교육 특강](http://news.lghellovision.net/news/articleView.html?idxno=563573)
+  <small>LG헬로비전 · 16:33</small>
+- [말레이시아, 미국 제재 기업 데이터센터 제한…싱가포르도 칩 우회 차단](https://www.aitimes.com/news/articleView.html?idxno=217748)
+  <small>AI타임스 · 16:33</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 24일(화)에 나온 기사 21건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-24.md)
+2026년 11월 24일(화)에 나온 기사 81건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-24.md)
 
 ::: v-pre
 
-- [삼성, '갤럭시' 이을 새 먹거리 찾는다…로봇·AI 인재 중용](https://www.bloter.net/news/articleViewAmp.html?idxno=679493)
-  <small>블로터 · 10:40</small>
-- [로봇주 일제급등…젠슨황 AI랠리에 삼전발 기대감 - 머니투데이](https://www.mt.co.kr/stock/2026/11/24/2026112410225990644)
-  <small>머니투데이 · 10:24</small>
-- [\[특징주\] 젠슨 황 복귀에 로봇주 일제히 강세…현대오토에버 22% 급등](https://biz.chosun.com/stock/stock_general/2026/11/24/HLZ2THAT3JCADEVMVKEHTP3LCM/)
-  <small>Chosunbiz · 09:39</small>
-- [KTR-KIRIA, 첨단로봇 지원 네트워크 구축 ‘손 잡아’](https://www.electimes.com/news/articleViewAmp.html?idxno=375184)
-  <small>전기신문 · 09:32</small>
-- [삼성전자, 임원 131명 승진 인사…HBM·로봇 핵심 인재 중용](https://news.google.com/rss/articles/CBMigwFBVV95cUxNQ0Zrczd0bkJKNmI2RUduT0h5Y1MxY0hJQUhzYzBLR1EtN2Y2MFg4SDVaRENzbGtUX2JFajBNZXdoTGxOdkVaQUR2RUlrY1NaSVM5N2NsdW43RXY3bUV6TzJydWZNTXoyZWRJcEYwRkc2S1BMUXF6dFBtNjVkX3RDQ1EtTQ?oc=5)
-  <small>조선일보 · 09:12</small>
+- [\[봇규의 헬로BOT\] “로봇아, 이제 출근해”\.\.\.‘수습기간’ 깐깐하게 따지는 KIRO, 실전은 다르니까](https://www.hellot.net/news/article.html?no=116554)
+  <small>헬로티 · 16:28</small>
+- ['깐부' 복귀에 현대오토에버 상한가…로봇·자율주행 기대까지](https://www.hankyung.com/article/202611247092i)
+  <small>한국경제 · 16:27</small>
+- [경북도, AI‧반도체‧로봇 등 인재 4만 2천 명 양성 첨단산업 인재 생태계 조성에 2360억 원 투입\!](https://www.irobotnews.com/news/articleView.html?idxno=49775)
+  <small>로봇신문 · 16:25</small>
+- [과기정통부, 5년간 535억원 투입해 국가대표 휴머노이드 육성 추진](https://www.irobotnews.com/news/articleView.html?idxno=49771)
+  <small>로봇신문 · 16:25</small>
+- [美 코넬대, 농업용 로봇·AI 연구센터 출범\.\.\.로봇 시제품 제작부터 현장 실증·상용화까지 추진](https://www.irobotnews.com/news/articleView.html?idxno=49774)
+  <small>로봇신문 · 16:23</small>
 
 :::
