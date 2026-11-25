@@ -2,20 +2,20 @@
 
 ## AI 뉴스
 
-2026년 11월 26일(목)에 나온 기사 15건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-26.md)
+2026년 11월 26일(목)에 나온 기사 22건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-26.md)
 
 ::: v-pre
 
-- [앤트로픽, 클로드로 누구나 PC 앱 제작·배포하도록 지원](https://www.aitimes.com/news/articleView.html?idxno=217786)
-  <small>AI타임스 · 06:12</small>
-- [OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work](https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/)
-  <small>TechCrunch · 05:03</small>
-- [Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it](https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/)
-  <small>TechCrunch · 04:54</small>
-- [Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’](https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/)
-  <small>TechCrunch · 04:44</small>
-- [칭화대 연구진이 창업한 ‘즈푸 AI’… 챗GPT·클로드와 어깨 나란히 \[중국 레드테크 열전\]](https://weekly.chosun.com/news/articleView.html?idxno=60041)
-  <small>주간조선 · 04:00</small>
+- [S\&P considers Nvidia credit downgrade over governance and ‘key man’ risks](https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/)
+  <small>TechCrunch · 07:44</small>
+- [AI 투자 불안에 극심한 변동장…나스닥 0\.6% 하락 \[뉴욕증시 브리핑\]](https://www.hankyung.com/article/2026112608776)
+  <small>한국경제 · 07:10</small>
+- [\[11월25일\] "AI의 의식, 문제는 만드는 법도 막는 법도 모른다는 것"](https://www.aitimes.com/news/articleView.html?idxno=217759)
+  <small>AI타임스 · 07:00</small>
+- [경기연구원, AI의 ‘가치관’에 주목하다](https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=s017&number=72062)
+  <small>경기도뉴스포털 · 07:00</small>
+- [Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future](https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent)
+  <small>The Verge · 06:51</small>
 
 :::
 
