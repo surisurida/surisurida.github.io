@@ -2,38 +2,38 @@
 
 ## AI 뉴스
 
-2026년 11월 26일(목)에 나온 기사 22건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-26.md)
+2026년 11월 26일(목)에 나온 기사 104건 중 최근 5건입니다. [전체 보기](/news/ai/2026-11-26.md)
 
 ::: v-pre
 
-- [S\&P considers Nvidia credit downgrade over governance and ‘key man’ risks](https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/)
-  <small>TechCrunch · 07:44</small>
-- [AI 투자 불안에 극심한 변동장…나스닥 0\.6% 하락 \[뉴욕증시 브리핑\]](https://www.hankyung.com/article/2026112608776)
-  <small>한국경제 · 07:10</small>
-- [\[11월25일\] "AI의 의식, 문제는 만드는 법도 막는 법도 모른다는 것"](https://www.aitimes.com/news/articleView.html?idxno=217759)
-  <small>AI타임스 · 07:00</small>
-- [경기연구원, AI의 ‘가치관’에 주목하다](https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=s017&number=72062)
-  <small>경기도뉴스포털 · 07:00</small>
-- [Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future](https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent)
-  <small>The Verge · 06:51</small>
+- ["공무원도 AI로 포스터 만든다"\.\.\.범정부 AI에 이미지 생성 모델 적용](https://www.aitimes.com/news/articleView.html?idxno=217799)
+  <small>AI타임스 · 11:44</small>
+- [한컴위드, 통합 보안관리 플랫폼 '한컴 엑사임스' 출시](https://www.aitimes.com/news/articleView.html?idxno=217795)
+  <small>AI타임스 · 11:44</small>
+- [이형일 부총리, “전략산업 육성이 우리 경제의 가장 중요한 과제”…피지컬 AI 상용화·에이전틱 AI 제도 정비 추진](https://www.aitimes.kr/news/articleView.html?idxno=42902)
+  <small>인공지능신문 · 11:41</small>
+- [“똑똑하기만 하면 다일까”…AI 모델마다 정책 판단 기준 제각각](https://www.hani.co.kr/arti/area/capital/1289197.html)
+  <small>한겨레 · 11:40</small>
+- [27일부터 'AI 가짜 의사·교수' 추천 광고 금지…위반 시 영업정지](https://www.aitimes.com/news/articleView.html?idxno=217797)
+  <small>AI타임스 · 11:38</small>
 
 :::
 
 ## 로봇 뉴스
 
-2026년 11월 26일(목)에 나온 기사 9건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-26.md)
+2026년 11월 26일(목)에 나온 기사 31건 중 최근 5건입니다. [전체 보기](/news/robot/2026-11-26.md)
 
 ::: v-pre
 
-- [\[단독\] 오전 로봇 설계→다음날 양산…충격의 대륙 혁신시계](https://www.joongang.co.kr/article/25482074)
-  <small>중앙일보 · 05:01</small>
-- [덤블링은 못하지만 제조 현장에 없어선 안 되는 한국 로봇](https://www.chosun.com/economy/startup_story/2026/11/26/4WR5JPDTWNEAHDT2JRMMTVFHO4/)
-  <small>조선일보 · 04:45</small>
-- [How Vention is cutting factory programming from weeks to minutes](https://www.therobotreport.com/how-vention-is-cutting-factory-programming-from-weeks-to-minutes/)
-  <small>The Robot Report · 03:24</small>
-- [“하루 1800병 척척”…日 편의점, 음료 진열하는 AI 로봇 도입](https://www.donga.com/news/Inter/article/all/20261126/135092793/1)
-  <small>동아일보 · 03:12</small>
-- [\[기획특집 ③\] 중국 피지컬 AI 산업 전략이 한국에 던지는 과제…'로봇 강국'에서 '지능형 로봇 활용 강국'으로](https://www.irobotnews.com/news/articleView.html?idxno=49782)
-  <small>로봇신문 · 02:46</small>
+- [한림대강남성심병원, '2026 한림 로봇인공관절 심포지엄'성료](https://www.monews.co.kr/news/articleView.html?idxno=415815)
+  <small>메디칼업저버 · 10:46</small>
+- [약국 재고 확인 로봇이…제이엔제이테크·루드다이나믹스 맞손](https://www.kpanews.co.kr/news/articleView.html?idxno=549970)
+  <small>약사공론 · 10:40</small>
+- [클로봇, 보스턴다이나믹스 ‘스팟’ 라이브 데모룸 공개…산업용 4족 보행 로봇 사업 확대](https://www.irobotnews.com/news/articleView.html?idxno=49802)
+  <small>로봇신문 · 10:33</small>
+- [에브리봇, ‘머큐어 서울 마곡’에 AI 청소로봇 도입 추진…호텔 B2B 공략](https://stock.mk.co.kr/news/view/1206374)
+  <small>매일경제 마켓 · 10:18</small>
+- [엔젤로보틱스 나동욱 이사, ‘2026 보건의료기술진흥 유공자’ 보건복지부 장관표창 수상](https://www.irobotnews.com/news/articleView.html?idxno=49813)
+  <small>로봇신문 · 10:17</small>
 
 :::
